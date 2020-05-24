@@ -1,12 +1,14 @@
 <p align="center">
-  <img src="https://github.com/inokufu/api/blob/master/source/images/logo_inokufu_API_cloud_square.svg" alt="Inokufu API Cloud Documentation " width="300">
+  <a href="https://inokufu.github.io/api/#introduction">
+  <img src="https://github.com/inokufu/api/blob/master/source/images/logo_inokufu_API_cloud_square.svg" alt="Inokufu API Cloud Documentation " width="300"></a>
   <br>
 </p>
 
-<p align="center">Inokufu API Cloud helps you supercharge your app with the best learning data.</p>
+
+<p align="center">Building the biggest and sharpest Database of Learning Objects.</p>
 
 
-
+The API documentation page can be accessed [here](https://inokufu.github.io/api/#introduction)
 
 Features
 ------------
