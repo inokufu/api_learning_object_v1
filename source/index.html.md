@@ -57,7 +57,7 @@ Inokufu API Cloud uses API keys to allow access to the API. You can register for
 
 Free Developer API key are available and let you make up to 1000 request per month.
 
-For higher request quota we offer paid usage plan starting at 100 $/month. Feel free to get in touch at [contact@inokufu.com](mailto:contact@inokufu.com) we will ove to see how we can suit your needs.
+For higher request quota we offer paid usage plan starting at 100 $/month. Feel free to get in touch at [contact@inokufu.com](mailto:contact@inokufu.com) we are fully dedicated to our customers success. Education is more than a mere business. We believe in better education access and efficiency. We believe in technology. We believe in better Educational Technology (EdTech) to push the boundaries of education access and efficiency.
 
 Inokufu API Cloud expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
