@@ -1,11 +1,10 @@
 <p align="center">
-  <img src="https://github.com/inokufu/api/blob/master/source/images/logo_inokufu_API_cloud_square.svg" alt="Inokufu API Cloud Documentation " width="400">
+  <img src="https://github.com/inokufu/api/blob/master/source/images/logo_inokufu_API_cloud_square.svg" alt="Inokufu API Cloud Documentation " width="300">
   <br>
 </p>
 
-<p align="center">Slate helps you create beautiful, intelligent, responsive API documentation.</p>
+<p align="center">Inokufu API Cloud helps you supercharge your app with the best learning data.</p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/slatedocs/img/master/screenshot-slate.png" width=700 alt="Screenshot of Example Documentation created with Slate"></p>
 
 
 
@@ -73,10 +72,9 @@ For those who don't have JavaScript runtime or are experiencing JavaScript runti
 Questions? Need Help? Found a bug?
 --------------------
 
-If you've got questions about setup, deploying, special feature implementation in your fork, or just want to chat with the developer, please feel free to [start a thread in our Discussions tab](https://github.com/slatedocs/slate/discussions)!
+If you've got questions about setup, deploying, special feature implementation in your fork, or just want to chat with the developer, please feel free to send us an email to [support@inokufu.com](mailto:support@inokufu.com)!
 
-Found a bug with upstream Slate? Go ahead and [submit an issue](https://github.com/slatedocs/slate/issues). And, of course, feel free to submit pull requests with bug fixes or changes to the `dev` branch.
 
 Credits
 --------------------
-<p align="center"><em>This API documentation was created with Slate. Check it out at <a href="https://slatedocs.github.io/slate">slatedocs.github.io/slate</a>.</em></p>
+This API documentation was created with Slate. Check it out at <a href="https://slatedocs.github.io/slate">slatedocs.github.io/slate</a>.
