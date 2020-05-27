@@ -3,9 +3,7 @@ title: API Documentation
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
-  - javascript
+
 
 toc_footers:
   - <a href='mailto:contact@inokufu.com'>Ask a Developer Key 🔑 here</a>
@@ -27,28 +25,10 @@ We have language bindings in Shell, Ruby, Python, and JavaScript! You can view c
 
 > To authorize, use this code:
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('SAY-FRIEND-AND-ENTER')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('SAY-FRIEND-AND-ENTER')
-```
-
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
   -H "x-api-key: SAY-FRIEND-AND-ENTER"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('SAY-FRIEND-AND-ENTER');
 ```
 
 > Make sure to replace `SAY-FRIEND-AND-ENTER` with your own Developer API key.
@@ -73,29 +53,9 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
 
 ## Type
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('SAY-FRIEND-AND-ENTER')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('SAY-FRIEND-AND-ENTER')
-api.kittens.get()
-```
 
 ```shell
 curl "https://api.inokufu.com/v1/type"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('SAY-FRIEND-AND-ENTER');
-let kittens = api.kittens.get();
 ```
 
 > The above command returns JSON structured like this:
@@ -145,29 +105,8 @@ This endpoint does not require any query parameter.
 
 ## Bloom
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('SAY-FRIEND-AND-ENTER')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('SAY-FRIEND-AND-ENTER')
-api.kittens.get()
-```
-
 ```shell
 curl "https://api.inokufu.com/v1/bloom"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('SAY-FRIEND-AND-ENTER');
-let kittens = api.kittens.get();
 ```
 
 > The above command returns JSON structured like this:
@@ -213,29 +152,8 @@ This endpoint does not require any query parameter.
 <aside class="success">Higher levels of learning objectives are not yet implemented (analysis, synthesis, evaluation) but are definitely on our roadmap.</aside>
 ## Language
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('SAY-FRIEND-AND-ENTER')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('SAY-FRIEND-AND-ENTER')
-api.kittens.get()
-```
-
 ```shell
 curl "https://api.inokufu.com/v1/lang"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('SAY-FRIEND-AND-ENTER');
-let kittens = api.kittens.get();
 ```
 
 > The above command returns JSON structured like this:
@@ -275,30 +193,9 @@ More languages will be added in the upcoming months!
 
 ## Search
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('SAY-FRIEND-AND-ENTER')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('SAY-FRIEND-AND-ENTER')
-api.kittens.get()
-```
-
 ```shell
 curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mooc&lang=en&max=2
   -H "x-api-key: SAY-FRIEND-AND-ENTER"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('SAY-FRIEND-AND-ENTER');
-let kittens = api.kittens.get();
 ```
 
 > The above command returns JSON structured like this:
