@@ -17,9 +17,9 @@ search: true
 
 # Introduction
 
-Welcome to the Inokufu API Cloud! This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our database.
+Welcome to the Inokufu API Cloud! This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our index.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+You can view shell code examples in the dark area to the right. We are working on SDK for Ruby, Python, and JavaScript. When available you will be able to switch the programming language of the examples with the tabs in the top right.
 
 # Authentication
 
@@ -35,19 +35,31 @@ curl "api_endpoint_here"
 
 Inokufu API Cloud uses API keys to allow access to the API. You can register for a Developer API key by sending us an email at [contact@inokufu.com](mailto:contact@inokufu.com).
 
-For Demo purpose, you can use this API key : 'SAY-FRIEND-AND-ENTER'. 
-
-Free Developer API keys are available on request and let you make up to 250 requests per month.
-
-For higher request quota we offer paid usage plan starting at 100 $/month. Feel free to get in touch at [contact@inokufu.com](mailto:contact@inokufu.com) we are fully dedicated to the success of our customers and partners. Together we can make the education better. 😊
-
 Inokufu API Cloud expects for the API key to be included in API requests to the server in a header that looks like the following:
 
 `x-api-key: SAY-FRIEND-AND-ENTER`
 
+<aside class="notice">For Demo purpose, you can use this API key : <code>SAY-FRIEND-AND-ENTER</code> but beware both request speed and number of daily calls are limited with this key. </aside> 
+
+## Usage plans
+
+Free Developer API keys are available on request at [contact@inokufu.com](mailto:contact@inokufu.com) and enable you to make up to 250 calls per month. Perfect for experimenting or building a new edtech app!
+
+For higher monthly request quota and request speed, we offer paid usage plan starting at 100 €/month. Feel free to get in touch at [contact@inokufu.com](mailto:contact@inokufu.com). We are fully dedicated to the success of our customers and partners. Together we can make the education better. 😊
+
+Several usage plans are available depending on your needs.
+
+Usage plan | Free | Pro | Custom
+--------- | ------- | ----------- | -----------
+Request speed |  10 call/s | 100 call/s | >100 call/s
+Monthly limit | 250 calls | 30k calls | >30k calls
+Support | - | email | 24/7
+Monthly pricing | 0 € | 100 € | On quote 
+
 <aside class="warning">
 Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.
 </aside>
+
 
 # Learning Objects (LO)
 
@@ -238,7 +250,7 @@ curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mo
 
 This endpoint retrieves a list of LO based on the query parameters. 
 
-LO can be filtered by keywords, type, bloom step and language (english or french for now).
+LO can be searched and filtered by keywords, type, bloom level and language.
 
 ### HTTP Request
 
