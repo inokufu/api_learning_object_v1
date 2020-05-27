@@ -231,10 +231,16 @@
             <a href="#learning-objects-lo" class="toc-h1 toc-link" data-title="Learning Objects (LO)">Learning Objects (LO)</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#list-of-lo" class="toc-h2 toc-link" data-title="List of LO">List of LO</a>
+                    <a href="#type" class="toc-h2 toc-link" data-title="Type">Type</a>
                   </li>
                   <li>
-                    <a href="#lo-details" class="toc-h2 toc-link" data-title="LO details">LO details</a>
+                    <a href="#bloom" class="toc-h2 toc-link" data-title="Bloom">Bloom</a>
+                  </li>
+                  <li>
+                    <a href="#language" class="toc-h2 toc-link" data-title="Language">Language</a>
+                  </li>
+                  <li>
+                    <a href="#search" class="toc-h2 toc-link" data-title="Search">Search</a>
                   </li>
               </ul>
           </li>
@@ -246,8 +252,8 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='mailto:contact@inokufu.com'>Ask for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Powered by Slate</a></li>
+            <li><a href='mailto:contact@inokufu.com'>Ask a Developer Key 🔑 here</a></li>
+            <li><a href='http://www.inokufu.com/'>Made with ❤️ by Inokufu</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -263,47 +269,48 @@
 </blockquote>
 <div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'YOU-SHALL-NOT-PASS'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'YOU-SHALL-NOT-PASS'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: YOU-SHALL-NOT-PASS"</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: SAY-FRIEND-AND-ENTER"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">YOU-SHALL-NOT-PASS</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">);</span>
 </code></pre></div>
 <blockquote>
-<p>Make sure to replace <code>YOU-SHALL-NOT-PASS</code> with your personal Developer API key.</p>
+<p>Make sure to replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key.</p>
 </blockquote>
 
 <p>Inokufu API Cloud uses API keys to allow access to the API. You can register for a Developer API key by sending us an email at <a href="mailto:contact@inokufu.com">contact@inokufu.com</a>.</p>
 
-<p>Free Developer API key are available and let you make up to 1000 request per month.</p>
+<p>For Demo purpose, you can use this API key : &#39;SAY-FRIEND-AND-ENTER&#39;. </p>
 
-<p>For higher request quota we offer paid usage plan starting at 100 $/month. Feel free to get in touch at <a href="mailto:contact@inokufu.com">contact@inokufu.com</a> we are fully dedicated to our customers success. Education is more than a mere business. We believe in better education access and efficiency. We believe in technology. We believe in better Educational Technology (EdTech) to push the boundaries of education access and efficiency.</p>
+<p>Free Developer API keys are available on request and let you make up to 250 requests per month.</p>
 
-<p>Inokufu API Cloud expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>For higher request quota we offer paid usage plan starting at 100 $/month. Feel free to get in touch at <a href="mailto:contact@inokufu.com">contact@inokufu.com</a> we are fully dedicated to the success of our customers and partners. Together we can make the education better. 😊</p>
 
-<p><code>Authorization: YOU-SHALL-NOT-PASS</code></p>
+<p>Inokufu API Cloud expects for the API key to be included in API requests to the server in a header that looks like the following:</p>
 
-<aside class="notice">
-You must replace <code>YOU-SHALL-NOT-PASS</code> with your personal Developer API key.
+<p><code>x-api-key: SAY-FRIEND-AND-ENTER</code></p>
+
+<aside class="warning">
+Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.
 </aside>
-<h1 id='learning-objects-lo'>Learning Objects (LO)</h1><h2 id='list-of-lo'>List of LO</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='learning-objects-lo'>Learning Objects (LO)</h1><h2 id='type'>Type</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'YOU-SHALL-NOT-PASS'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'YOU-SHALL-NOT-PASS'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
 <span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: YOU-SHALL-NOT-PASS"</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/type"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">YOU-SHALL-NOT-PASS</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
 </code></pre></div>
 <blockquote>
@@ -311,81 +318,293 @@ You must replace <code>YOU-SHALL-NOT-PASS</code> with your personal Developer AP
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"video"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational videos from providers such as YouTube, Dailymotion, Vimeo, etc."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mooc"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Massive Open Online Course (MOOC) from providers such as edX, Coursera, OpenClassrooms, Linkedin Learning, etc."</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"podcast"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Educational audio file from providers such as ApplePodcasts, SoundCloud."</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"training"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Training include any formal set of courses and other learning activities in a coherent learning package, including final assesments and certification (certificate, diploma, degree). Major providers are MonCompteFormation, PÃ´le Emploi, etc."</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"distance_learning"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Distance learning encompass any distance education or training which does not require learners to be physically present in a specifi location (brick and mortar school, university, training center). This includes correspondence courses wherein the student corresponded with the school via post, online education or eLearning but doesn't include MOOC which have their own type. Major providers are MonCompteFormation, PÃ´le Emploi, etc."</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a list of LO. </p>
+<p>This endpoint retrieves a list of the types of LO currently supported.   </p>
 
-<p>LO can be filtered by keywords, type, bloom step and language (english or french for now).</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>Type</th>
+<th>Example of providers</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td><code>video</code></td>
+<td>YouTube, Dailymotion, Vimeo</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td><code>mooc</code></td>
+<td>edX, Coursera, OpenClassrooms, Linkedin Learning</td>
+</tr>
+<tr>
+<td><code>podcast</code></td>
+<td>ApplePodcasts, SoundCloud</td>
+</tr>
+<tr>
+<td><code>training</code></td>
+<td>MonCompteFormation, Pôle Emploi</td>
+</tr>
+<tr>
+<td><code>distance_learning</code></td>
+<td>MonCompteFormation, Pôle Emploi</td>
 </tr>
 </tbody></table>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://api.inokufu.com/v1/type</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<p>This endpoint does not require any query parameter.</p>
+<h2 id='bloom'>Bloom</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='lo-details'>LO details</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'YOU-SHALL-NOT-PASS'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
 </code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'YOU-SHALL-NOT-PASS'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: YOU-SHALL-NOT-PASS"</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/bloom"</span>
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">YOU-SHALL-NOT-PASS</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"discover"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO are the first step to discover a job or a skill. You'll be able to talk about it, to know the basics. You'll have all the knowledge to decide wether it's for you or not."</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"understand"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO help you better understand this job or skill, in details. You'll dive deeper in the theory. You'll be able to explain, estimate, At the end, you'll be a master of the theoretical aspects."</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"do"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO help you put into practice what you have learned. You'll make, manipulate, simulate. You are applying what you learn."</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"curriculum"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO train you to a specific job or skill at a professional level. From Discovery, Understanding to Doing, at the end you are a Pro."</span><span class="p">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a list of the levels of learning objectives associated to a LO and currently supported. These levels are adapted from those of <a href="https://en.wikipedia.org/wiki/Bloom%27s_taxonomy">Bloom&#39;s taxonomy</a>. <code>discover</code> is used as a synonym of knowledge, <code>understand</code> for comprehension and <code>do</code> for application. Curriculum was added as a compound level for LO that include the three other levels (<code>discover</code>, <code>understand</code>, <code>do</code>) in a coherent way (e.g. University degree).  </p>
+
+<table><thead>
+<tr>
+<th>Bloom</th>
+<th>Learning objective</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>discover</code></td>
+<td>First step to discover a job or a skill. Memorize knowledge.</td>
+</tr>
+<tr>
+<td><code>understand</code></td>
+<td>Understanding a job or skill, in details. Being able to explain, estimate.</td>
+</tr>
+<tr>
+<td><code>do</code></td>
+<td>Put into practice what has been learned. Make, manipulate, simulate.</td>
+</tr>
+<tr>
+<td><code>curriculum</code></td>
+<td>Complete training to a specific job or skill at a professional level.</td>
+</tr>
+</tbody></table>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://api.inokufu.com/v1/bloom</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<p>This endpoint does not require any query parameter.</p>
+
+<aside class="success">Higher levels of learning objectives are not yet implemented (analysis, synthesis, evaluation) but are definitely on our roadmap.</aside>
+<h2 id='language'>Language</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/lang"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Use this code for LO in english language."</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fr"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Use this code for LO in french language (franÃ§ais)."</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves a list of the languages currently supported. Inokufu API cloud uses ISO 2 Letter Language Codes for every endpoints with <code>lang</code> as a query parameter.  </p>
+
+<table><thead>
+<tr>
+<th>Lang code</th>
+<th>Language</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>en</code></td>
+<td>english</td>
+</tr>
+<tr>
+<td><code>fr</code></td>
+<td>french</td>
+</tr>
+</tbody></table>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://api.inokufu.com/v1/lang</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<p>This endpoint does not require any query parameter.</p>
+
+<aside class="success">
+More languages will be added in the upcoming months!
+</aside>
+<h2 id='search'>Search</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'SAY-FRIEND-AND-ENTER'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/search?keywords=python&amp;bloom=understand&amp;type=mooc&amp;lang=en&amp;max=2
+  -H "</span>x-api-key: SAY-FRIEND-AND-ENTER<span class="s2">"
+</span></code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="s2">"python"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mooc"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sort"</span><span class="p">:</span><span class="w"> </span><span class="s2">"best"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"understand"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Using Python for Research"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.edx.org/course/using-python-for-research-2"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/c9d14131-a515-462b-82e2-6eaec5bc1c17-f7c5de2ca2ae.small.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\"</span><span class="s2">Harvard University , edX</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">480.0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Python Basics for Data Science"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.edx.org/course/python-basics-for-data-science-2"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/381a0046-5d78-4790-8776-74620d59f48e-48611c7ca556.small.png"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\"</span><span class="s2">IBM , edX</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
+<p>This endpoint retrieves a list of LO based on the query parameters. </p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p>LO can be filtered by keywords, type, bloom step and language (english or french for now).</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://api.inokufu.com/v1/search</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<p>Query parameters must be included in URL.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>keywords</code></td>
+<td></td>
+<td>No</td>
+<td>Keywords to be searched in LO title. Must be URL encoded (e.g. replacing spaces by <code>%20</code>). If empty, response will include LO of any title.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td></td>
+<td>No</td>
+<td>Currently supported types are <code>video</code>, <code>mooc</code>,<code>podcast</code>,<code>training</code> or <code>distance_learning</code>. If empty, response will include LO of any type.</td>
+</tr>
+<tr>
+<td><code>bloom</code></td>
+<td></td>
+<td>No</td>
+<td>Currently supported Bloom levels are <code>discover</code>, <code>understand</code>,<code>do</code> or <code>curriculum</code>. If empty, response will include LO of any Bloom level.</td>
+</tr>
+<tr>
+<td><code>lang</code></td>
+<td></td>
+<td>No</td>
+<td>Currently supported languages are <code>en</code> or <code>fr</code>. If empty, response will include LO of any language.</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td><code>random</code></td>
+<td>No</td>
+<td>Currently supported sorting order are <code>random</code> or <code>best</code>. If empty, response will be sorted in random order.</td>
+</tr>
+<tr>
+<td><code>max</code></td>
+<td></td>
+<td>Yes</td>
+<td>The maximum number of LO in response. Limited to 10.</td>
+</tr>
+</tbody></table>
+
+<p>API key must be included in a header that looks like the following:</p>
+
+<p><code>x-api-key: SAY-FRIEND-AND-ENTER</code></p>
+
+<aside class="warning">
+Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.</aside>
+<h3 id='response-parameters'>Response Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -393,10 +612,37 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td><code>title</code></td>
+<td>Complete title of the LO.</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Link to the LO webpage.</td>
+</tr>
+<tr>
+<td><code>pictureFullwidth</code></td>
+<td>Link to the picture of the LO in landscape format.</td>
+</tr>
+<tr>
+<td><code>pictureSquare</code></td>
+<td>Link to the picture of the LO in square or portrait format.</td>
+</tr>
+<tr>
+<td><code>provider</code></td>
+<td>Entity providing or hosting the LO.</td>
+</tr>
+<tr>
+<td><code>learningTimeUnit</code></td>
+<td>Unit of time associated to the learning time of the LO.</td>
+</tr>
+<tr>
+<td><code>learningTimeValue</code></td>
+<td>Learning time of the LO.</td>
 </tr>
 </tbody></table>
+
+<aside class="success">
+More API endpoints are under development. Feel free to reach us at contact@inokufu.com if you have specific need or idea. </aside>
 <h1 id='credits'>Credits</h1>
 <p>This API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to check their awesome repo on Github!</p>
 <h1 id='errors'>Errors</h1>
