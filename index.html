@@ -223,6 +223,11 @@
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#usage-plans" class="toc-h2 toc-link" data-title="Usage plans">Usage plans</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#learning-objects-lo" class="toc-h1 toc-link" data-title="Learning Objects (LO)">Learning Objects (LO)</a>
@@ -257,9 +262,9 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Inokufu API Cloud! This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our database.</p>
+<p>Welcome to the Inokufu API Cloud! This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our index.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>You can view shell code examples in the dark area to the right. We are working on SDK for Ruby, Python, and JavaScript. When available you will be able to switch the programming language of the examples with the tabs in the top right.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
@@ -274,15 +279,51 @@ curl <span class="s2">"api_endpoint_here"</span>
 
 <p>Inokufu API Cloud uses API keys to allow access to the API. You can register for a Developer API key by sending us an email at <a href="mailto:contact@inokufu.com">contact@inokufu.com</a>.</p>
 
-<p>For Demo purpose, you can use this API key : &#39;SAY-FRIEND-AND-ENTER&#39;. </p>
-
-<p>Free Developer API keys are available on request and let you make up to 250 requests per month.</p>
-
-<p>For higher request quota we offer paid usage plan starting at 100 $/month. Feel free to get in touch at <a href="mailto:contact@inokufu.com">contact@inokufu.com</a> we are fully dedicated to the success of our customers and partners. Together we can make the education better. 😊</p>
-
 <p>Inokufu API Cloud expects for the API key to be included in API requests to the server in a header that looks like the following:</p>
 
 <p><code>x-api-key: SAY-FRIEND-AND-ENTER</code></p>
+
+<aside class="notice">For Demo purpose, you can use this API key : <code>SAY-FRIEND-AND-ENTER</code> but beware both request speed and number of daily calls are limited with this key. </aside> 
+<h2 id='usage-plans'>Usage plans</h2>
+<p>Free Developer API keys are available on request at <a href="mailto:contact@inokufu.com">contact@inokufu.com</a> and enable you to make up to 250 calls per month. Perfect for experimenting or building a new edtech app!</p>
+
+<p>For higher monthly request quota and request speed, we offer paid usage plan starting at 100 €/month. Feel free to get in touch at <a href="mailto:contact@inokufu.com">contact@inokufu.com</a>. We are fully dedicated to the success of our customers and partners. Together we can make the education better. 😊</p>
+
+<p>Several usage plans are available depending on your needs.</p>
+
+<table><thead>
+<tr>
+<th>Usage plan</th>
+<th>Free</th>
+<th>Pro</th>
+<th>Custom</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Request speed</td>
+<td>10 call/s</td>
+<td>100 call/s</td>
+<td>&gt;100 call/s</td>
+</tr>
+<tr>
+<td>Monthly limit</td>
+<td>250 calls</td>
+<td>30k calls</td>
+<td>&gt;30k calls</td>
+</tr>
+<tr>
+<td>Support</td>
+<td>-</td>
+<td>email</td>
+<td>24/7</td>
+</tr>
+<tr>
+<td>Monthly pricing</td>
+<td>0 €</td>
+<td>100 €</td>
+<td>On quote</td>
+</tr>
+</tbody></table>
 
 <aside class="warning">
 Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.
@@ -486,7 +527,7 @@ More languages will be added in the upcoming months!
 </span></code></pre></div>
 <p>This endpoint retrieves a list of LO based on the query parameters. </p>
 
-<p>LO can be filtered by keywords, type, bloom step and language (english or french for now).</p>
+<p>LO can be searched and filtered by keywords, type, bloom level and language.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET https://api.inokufu.com/v1/search</code></p>
 <h3 id='query-parameters-4'>Query Parameters</h3>
