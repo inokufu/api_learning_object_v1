@@ -39,7 +39,7 @@ Inokufu API Cloud expects for the API key to be included in API requests to the 
 
 `x-api-key: SAY-FRIEND-AND-ENTER`
 
-<aside class="notice">For Demo purpose, you can use this API key : <code>SAY-FRIEND-AND-ENTER</code> but beware both request speed and number of daily calls are limited with this key. </aside> 
+<aside class="notice">For Demo purpose, you can use this API key : <code>demo29331806e87fe8d34d03ddaad2b1b454b58a5b9d4f1385d4f86bb321</code> but beware both request speed and number of daily calls are limited with this key. </aside> 
 
 ## Usage plans
 
@@ -206,7 +206,7 @@ More languages will be added in the upcoming months!
 ## Search
 
 ```shell
-curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mooc&lang=en&max=2
+curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mooc&lang=en&max=2"
   -H "x-api-key: SAY-FRIEND-AND-ENTER"
 ```
 
@@ -273,8 +273,10 @@ API key must be included in a header that looks like the following:
 
 `x-api-key: SAY-FRIEND-AND-ENTER`
 
-<aside class="warning">
-Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.</aside>
+<aside class="notice">For Demo purpose, you can use this API key : <code>demo29331806e87fe8d34d03ddaad2b1b454b58a5b9d4f1385d4f86bb321</code> but beware both request speed and number of daily calls are limited with this key. </aside> 
+
+<aside class="success">
+For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key.</aside>
 
 ### Response Parameters
 
