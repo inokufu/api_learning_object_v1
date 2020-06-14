@@ -6,8 +6,8 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 
 toc_footers:
-  - <a href='mailto:contact@inokufu.com'>Ask a Developer Key 🔑 here</a>
-  - <a href='http://www.inokufu.com/'>Made with ❤️ by Inokufu</a>
+  - <a href="mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a free API key for testing purpose / paid API key for integrating it in my app/project. %0D%0A %0D%0A Regards, %0D%0A ...">Ask a Developer Key 🔑 here</a>
+  - <a href="http://www.inokufu.com/">Made with ❤️ by Inokufu</a>
 
 includes:
   - errors
@@ -17,7 +17,9 @@ search: true
 
 # Introduction
 
-Welcome to the Inokufu API Cloud! This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our index.
+Welcome to the Inokufu API Cloud 🎉
+
+This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our index. This index has currently more than 700k learning objects from various sources such as YouTube, Coursera, edX, Apple podcasts, Google Play store, etc.
 
 You can view shell code examples in the dark area to the right. We are working on SDK for Ruby, Python, and JavaScript. When available you will be able to switch the programming language of the examples with the tabs in the top right.
 
@@ -33,7 +35,7 @@ curl "api_endpoint_here"
 
 > Make sure to replace `SAY-FRIEND-AND-ENTER` with your own Developer API key.
 
-Inokufu API Cloud uses API keys to allow access to the API. You can register for a Developer API key by sending us an email at [contact@inokufu.com](mailto:contact@inokufu.com).
+Inokufu API Cloud uses API keys to allow access to our API. You can register for a Developer API key by sending us an email at [contact@inokufu.com](mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a free API key for testing purpose / paid API key for integrating it in my app/project. %0D%0A %0D%0A Regards, %0D%0A ...).
 
 Inokufu API Cloud expects for the API key to be included in API requests to the server in a header that looks like the following:
 
@@ -43,18 +45,21 @@ Inokufu API Cloud expects for the API key to be included in API requests to the 
 
 ## Usage plans
 
-Free Developer API keys are available on request at [contact@inokufu.com](mailto:contact@inokufu.com) and enable you to make up to 250 calls per month. Perfect for experimenting or building a new edtech app!
+Free Developer API keys are available on request at [contact@inokufu.com](mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a free API key for testing purpose. %0D%0A %0D%0A Regards, %0D%0A ...) and enable you to make up to 250 calls per month. Perfect for experimenting or building a new edtech app!
 
-For higher monthly request quota and request speed, we offer paid usage plan starting at 100 €/month. Feel free to get in touch at [contact@inokufu.com](mailto:contact@inokufu.com). We are fully dedicated to the success of our customers and partners. Together we can make the education better. 😊
+For higher monthly request quota and request speed, we offer paid usage plan starting at 100 €/month. Feel free to get in touch at [contact@inokufu.com](mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a paid API key for integrating it in my app/project. %0D%0A %0D%0A Regards, %0D%0A ...). We are fully dedicated to the success of our customers and partners. Together we can make education better. 😊
 
 Several usage plans are available depending on your needs.
 
-Usage plan | Free | Pro | Custom
---------- | ------- | ----------- | -----------
-Request speed |  10 call/s | 100 call/s | >100 call/s
-Monthly limit | 250 calls | 30k calls | >30k calls
-Support | - | email | 24/7
-Monthly pricing | 0 € | 100 € | On quote 
+Usage plan | Free | Lite | Pro | Custom
+--- | :-:  | :-: | :-: | :-:
+Request speed |  10 call/s | 100 call/s | 250 call/s | >> 250 call/s
+Monthly limit | 250 calls | 18k calls | 30k calls | >> 30k calls
+Search in Title | ✔️ | ✔️ |  ✔️ | ✔️
+Search by ROME | - | ✔️ |  ✔️ | ✔️
+Search by Formacode | - | ✔️ |  ✔️ | ✔️
+Support | - | email |  email (48h) | email + phone (24h/7)
+Monthly pricing | 0 € | 100 € | 500 € | On quote 
 
 <aside class="warning">
 Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.
@@ -87,12 +92,8 @@ curl "https://api.inokufu.com/v1/type"
     "description": "Educational audio file from providers such as ApplePodcasts, SoundCloud."
   },
   {
-    "type": "training",
-    "description": "Training include any formal set of courses and other learning activities in a coherent learning package, including final assesments and certification (certificate, diploma, degree). Major providers are MonCompteFormation, PÃ´le Emploi, etc."
-  },
-  {
-    "type": "distance_learning",
-    "description": "Distance learning encompass any distance education or training which does not require learners to be physically present in a specifi location (brick and mortar school, university, training center). This includes correspondence courses wherein the student corresponded with the school via post, online education or eLearning but doesn't include MOOC which have their own type. Major providers are MonCompteFormation, PÃ´le Emploi, etc."
+    "type": "app",
+    "description": "Educational app or app that are useful for learning a new skill of job, from providers such as App Store, Google Play Store."
   }
 ]
 ```
@@ -104,8 +105,7 @@ Type | Example of providers
 `video` | YouTube, Dailymotion, Vimeo 
 `mooc` | edX, Coursera, OpenClassrooms, Linkedin Learning 
 `podcast` | ApplePodcasts, SoundCloud 
-`training` | MonCompteFormation, Pôle Emploi 
-`distance_learning` | MonCompteFormation, Pôle Emploi 
+`app` | App Store, Google Play Store 
 
 ### HTTP Request
 
@@ -113,7 +113,9 @@ Type | Example of providers
 
 ### Query Parameters
 
-This endpoint does not require any query parameter.
+This endpoint does not require any query parameter. 
+
+<aside class="success">More types such as books, trainings, distance learnings and articles will be added in the upcoming weeks. </aside>
 
 ## Bloom
 
@@ -178,7 +180,7 @@ curl "https://api.inokufu.com/v1/lang"
   },
   {
     "lang": "fr",
-    "description": "Use this code for LO in french language (franÃ§ais)."
+    "description": "Use this code for LO in french language (français)."
   }
 ]
 ```
@@ -186,7 +188,7 @@ curl "https://api.inokufu.com/v1/lang"
 This endpoint retrieves a list of the languages currently supported. Inokufu API cloud uses ISO 2 Letter Language Codes for every endpoints with `lang` as a query parameter.  
 
 Lang code | Language 
---------- | ------- 
+--- | :-:  
 `en` | english
 `fr` | french 
 
@@ -203,7 +205,7 @@ This endpoint does not require any query parameter.
 More languages will be added in the upcoming months!
 </aside>
 
-## Search
+## Search in Title
 
 ```shell
 curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mooc&lang=en&max=2"
@@ -261,12 +263,12 @@ LO can be searched and filtered by keywords, type, bloom level and language.
 Query parameters must be included in URL.
 
 Parameter | Default | Required | Description
---------- | ------- | ----------- | -----------
-`keywords` | | No | Keywords to be searched in LO title. Must be URL encoded (e.g. replacing spaces by `%20`). If empty, response will include LO of any title.
-`type` | | No | Currently supported types are `video`, `mooc`,`podcast`,`training` or `distance_learning`. If empty, response will include LO of any type.
+--------- | :-: | :-: | -----------
+`keywords` | | Yes | Keywords to be searched in LO title. Must be URL encoded (e.g. replacing spaces by `%20`).
+`lang` |  | Yes | Currently supported languages are `en` or `fr`.
+`type` | | No | Currently supported types are `video`, `mooc`,`podcast` or `app`. If empty, response will include LO of any type.
 `bloom` | | No | Currently supported Bloom levels are `discover`, `understand`,`do` or `curriculum`. If empty, response will include LO of any Bloom level.
-`lang` |  | No | Currently supported languages are `en` or `fr`. If empty, response will include LO of any language.
-`sort` | `random` | No | Currently supported sorting order are `random` or `best`. If empty, response will be sorted in random order.
+`sort` | `best` | No | Currently supported sorting order are `random` or `best`. If empty, response will be sorted by relevancy (i.e. `best`).
 `max` |  | Yes | The maximum number of LO in response. Limited to 10.
 
 API key must be included in a header that looks like the following:
@@ -288,7 +290,204 @@ Parameter |  Description
 `pictureSquare` | Link to the picture of the LO in square or portrait format.
 `provider` | Entity providing or hosting the LO.
 `learningTimeUnit` | Unit of time associated to the learning time of the LO.
-`learningTimeValue` | Learning time of the LO.
+`learningTimeValue` | Learning time of the LO. Return `-1` when not applicable (N/A) or missing value.
+
+<aside class="success">
+More API endpoints are under development. Feel free to reach us at contact@inokufu.com if you have specific need or idea. </aside>
+
+## Search by ROME
+
+```shell
+curl "https://api.inokufu.com/v1/searchrome?rome=H2605&lang=fr&max=3"
+  -H "x-api-key: SAY-FRIEND-AND-ENTER"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "statusCode": 200,
+    "request": {
+        "rome": "H2605",
+        "lang": "fr",
+        "type": "",
+        "sort": "",
+        "max": 3,
+        "bloom": ""
+    },
+    "response": [
+        {
+            "item": 0,
+            "title": " Les composants électroniques  L'électronique de zéro ...",
+            "url": "https://openclassrooms.com/fr/courses/724810-lelectronique-de-zero/721680-les-composants-electroniques",
+            "pictureFullwidth": "https://static.oc-static.com/prod/courses/course_teaser_picture_default.jpg",
+            "pictureSquare": "https://static.oc-static.com/prod/courses/course_teaser_picture_default.jpg",
+            "provider": "OpenClassrooms",
+            "learningTimeUnit": "h",
+            "learningTimeValue": 0.3469499999999999
+        },
+        {
+            "item": 1,
+            "title": " La diode  L'électronique de zéro  ",
+            "url": "https://openclassrooms.com/fr/courses/724810-lelectronique-de-zero/724552-la-diode",
+            "pictureFullwidth": "https://static.oc-static.com/prod/courses/course_teaser_picture_default.jpg",
+            "pictureSquare": "https://static.oc-static.com/prod/courses/course_teaser_picture_default.jpg",
+            "provider": "OpenClassrooms",
+            "learningTimeUnit": "h",
+            "learningTimeValue": 0.3469499999999999
+        },
+        {
+            "item": 2,
+            "title": "Enseignes et afficheurs à LED",
+            "url": "https://www.coursera.org/learn/enseignes-et-afficheurs-led",
+            "pictureFullwidth": "\"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f3/5cdb40168111e6a053c1fc50b1e8d2/LED-2560x1440px-150dpi.jpg?auto=format,compress\"",
+            "pictureSquare": "nan",
+            "provider": "Coursera",
+            "learningTimeUnit": "h",
+            "learningTimeValue": 27.895
+        }
+    ]
+}
+```
+
+This endpoint retrieves a list of LO based associated to a specific ROME code. For more information about ROME code, please check [here](https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/).
+
+LO can be searched and filtered by ROME code, type, bloom level and language.
+
+### HTTP Request
+
+`GET https://api.inokufu.com/v1/searchrome`
+
+### Query Parameters
+
+Query parameters must be included in URL.
+
+Parameter | Default | Required | Description
+--------- | :-: | :-: | -----------
+`rome` | | Yes | Code ROME to be searched. Must be the exact ROME code starting by a uppercase letter and followed by 4 digits without any space (e.g. H2605). For the complete list of ROME code, please check [here](https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/).
+`lang` |  | Yes | Currently supported languages are `en` or `fr`.
+`type` | | No | Currently supported types are `video`, `mooc`,`podcast` or `app`. If empty, response will include LO of any type.
+`bloom` | | No | Currently supported Bloom levels are `discover`, `understand`,`do` or `curriculum`. If empty, response will include LO of any Bloom level.
+`sort` | `best` | No | Currently supported sorting order are `random` or `best`. If empty, response will be sorted by relevancy (i.e. `best`).
+`max` |  | Yes | The maximum number of LO in response. Limited to 10.
+
+API key must be included in a header that looks like the following:
+
+`x-api-key: SAY-FRIEND-AND-ENTER`
+
+<aside class="notice">For Demo purpose, you can use this API key : <code>demo29331806e87fe8d34d03ddaad2b1b454b58a5b9d4f1385d4f86bb321</code> but beware both request speed and number of daily calls are limited with this key. </aside> 
+
+<aside class="success">
+For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key.</aside>
+
+### Response Parameters
+
+Parameter |  Description
+--------- | -----------
+`title` | Complete title of the LO.
+`url` | Link to the LO webpage.
+`pictureFullwidth` | Link to the picture of the LO in landscape format.
+`pictureSquare` | Link to the picture of the LO in square or portrait format.
+`provider` | Entity providing or hosting the LO.
+`learningTimeUnit` | Unit of time associated to the learning time of the LO.
+`learningTimeValue` | Learning time of the LO. Return `-1` when not applicable (N/A) or missing value.
+
+## Search by Formacode
+
+```shell
+curl "https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3"
+  -H "x-api-key: SAY-FRIEND-AND-ENTER"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "statusCode": 200,
+    "request": {
+        "formacode": "15012",
+        "lang": "en",
+        "type": "",
+        "sort": "",
+        "max": 3,
+        "bloom": ""
+    },
+    "response": [
+        {
+            "item": 0,
+            "title": "Presentation skills: Speechwriting and Storytelling",
+            "url": "https://www.coursera.org/learn/speechwriting",
+            "pictureFullwidth": "\"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/95/96d7702e3311e795cc116ac5c4d4d4/story.png?auto=format,compress\"",
+            "pictureSquare": "nan",
+            "provider": "Coursera",
+            "learningTimeUnit": "h",
+            "learningTimeValue": 32.0
+        },
+        {
+            "item": 1,
+            "title": "?Time to Shine Podcast : Public speaking | Communication skills | Storytelling ",
+            "url": "https://podcasts.apple.com/fr/podcast/time-to-shine-podcast-public-speaking-communication/id930870411?mt=2&app=podcast&at=1010lMK9",
+            "pictureFullwidth": "nan",
+            "pictureSquare": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/4f/9c/3c/4f9c3cf9-671e-c6ba-c2a9-c4610144cc57/mza_4495520741840665111.png/400x400.png",
+            "provider": "Apple Podcasts",
+            "learningTimeUnit": "min",
+            "learningTimeValue": 21786.0
+        },
+        {
+            "item": 2,
+            "title": "Oral Communication for Engineering Leaders",
+            "url": "https://www.coursera.org/learn/oral-communication",
+            "pictureFullwidth": "\"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/f608209f7311e69f58250f615c1d2a/comp-600px-2.jpg?auto=format,compress\"",
+            "pictureSquare": "nan",
+            "provider": "Coursera",
+            "learningTimeUnit": "h",
+            "learningTimeValue": 21.0
+        }
+    ]
+}
+```
+
+This endpoint retrieves a list of LO based associated to a specific Formacode number. For more information about Formacode, please check [here](https://formacode.centre-inffo.fr/spip.php?page=thesaurus).
+
+LO can be searched and filtered by Formacode number, type, bloom level and language.
+
+### HTTP Request
+
+`GET https://api.inokufu.com/v1/searchformacode`
+
+### Query Parameters
+
+Query parameters must be included in URL.
+
+Parameter | Default | Required | Description
+--------- | :-: | :-: | -----------
+`formacode` | | Yes | Formacode to be searched. Must be the exact 5-digits Formacode number without any space (e.g. 15012). For the complete list of Formacode, please check [here](https://formacode.centre-inffo.fr/spip.php?page=thesaurus).
+`lang` |  | Yes | Currently supported languages are `en` or `fr`.
+`type` | | No | Currently supported types are `video`, `mooc`,`podcast` or `app`. If empty, response will include LO of any type.
+`bloom` | | No | Currently supported Bloom levels are `discover`, `understand`,`do` or `curriculum`. If empty, response will include LO of any Bloom level.
+`sort` | `best` | No | Currently supported sorting order are `random` or `best`. If empty, response will be sorted by relevancy (i.e. `best`).
+`max` |  | Yes | The maximum number of LO in response. Limited to 10.
+
+API key must be included in a header that looks like the following:
+
+`x-api-key: SAY-FRIEND-AND-ENTER`
+
+<aside class="notice">For Demo purpose, you can use this API key : <code>demo29331806e87fe8d34d03ddaad2b1b454b58a5b9d4f1385d4f86bb321</code> but beware both request speed and number of daily calls are limited with this key. </aside> 
+
+<aside class="success">
+For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key.</aside>
+
+### Response Parameters
+
+Parameter |  Description
+--------- | -----------
+`title` | Complete title of the LO.
+`url` | Link to the LO webpage.
+`pictureFullwidth` | Link to the picture of the LO in landscape format.
+`pictureSquare` | Link to the picture of the LO in square or portrait format.
+`provider` | Entity providing or hosting the LO.
+`learningTimeUnit` | Unit of time associated to the learning time of the LO.
+`learningTimeValue` | Learning time of the LO. Return `-1` when not applicable (N/A) or missing value.
 
 <aside class="success">
 More API endpoints are under development. Feel free to reach us at contact@inokufu.com if you have specific need or idea. </aside>
