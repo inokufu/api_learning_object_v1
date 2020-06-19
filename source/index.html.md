@@ -59,7 +59,7 @@ Search in Title | ✔️ | ✔️ |  ✔️ | ✔️
 Search by ROME | - | ✔️ |  ✔️ | ✔️
 Search by Formacode | - | ✔️ |  ✔️ | ✔️
 Support | - | email |  email (48h) | email + phone (24h/7)
-Monthly pricing | 0 € | 100 € | 500 € | On quote 
+Monthly pricing (€) | 0 | 100 | 500 | On quote 
 
 <aside class="warning">
 Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.
@@ -270,6 +270,7 @@ Parameter | Default | Required | Description
 `bloom` | | No | Currently supported Bloom levels are `discover`, `understand`,`do` or `curriculum`. If empty, response will include LO of any Bloom level.
 `sort` | `best` | No | Currently supported sorting order are `random` or `best`. If empty, response will be sorted by relevancy (i.e. `best`).
 `max` |  | Yes | The maximum number of LO in response. Limited to 10.
+`model` | `strict` | No | Two models are available: `strict` or `extended`. `strict` tends to return less results but closer to the query keywords. `extended` tends to return more results by taking the broader meaning of the query keywords. If empty, `strict` model is used by default. 
 
 API key must be included in a header that looks like the following:
 
@@ -364,12 +365,14 @@ Query parameters must be included in URL.
 
 Parameter | Default | Required | Description
 --------- | :-: | :-: | -----------
-`rome` | | Yes | Code ROME to be searched. Must be the exact ROME code starting by a uppercase letter and followed by 4 digits without any space (e.g. H2605). For the complete list of ROME code, please check [here](https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/).
+`rome` | | Yes | ROME code to be searched. Must be the exact ROME code starting by a uppercase letter and followed by 4 digits without any space (e.g. H2605). For the complete list of ROME code, please check [here](https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/).
 `lang` |  | Yes | Currently supported languages are `en` or `fr`.
 `type` | | No | Currently supported types are `video`, `mooc`,`podcast` or `app`. If empty, response will include LO of any type.
 `bloom` | | No | Currently supported Bloom levels are `discover`, `understand`,`do` or `curriculum`. If empty, response will include LO of any Bloom level.
 `sort` | `best` | No | Currently supported sorting order are `random` or `best`. If empty, response will be sorted by relevancy (i.e. `best`).
 `max` |  | Yes | The maximum number of LO in response. Limited to 10.
+`model` | `strict` | No | Two models are available: `strict` or `extended2`. `strict` tends to return less results but closer to the query ROME code. `extended2` tends to return more results by taking the broader meaning of the query ROME code. If empty, `strict` model is used by default. 
+
 
 API key must be included in a header that looks like the following:
 
@@ -467,6 +470,7 @@ Parameter | Default | Required | Description
 `bloom` | | No | Currently supported Bloom levels are `discover`, `understand`,`do` or `curriculum`. If empty, response will include LO of any Bloom level.
 `sort` | `best` | No | Currently supported sorting order are `random` or `best`. If empty, response will be sorted by relevancy (i.e. `best`).
 `max` |  | Yes | The maximum number of LO in response. Limited to 10.
+`model` | `strict` | No | Two models are available: `strict` or `extended2`. `strict` tends to return less results but closer to the query Formacode. `extended2` tends to return more results by taking the broader meaning of the query Formacode. If empty, `strict` model is used by default. 
 
 API key must be included in a header that looks like the following:
 
