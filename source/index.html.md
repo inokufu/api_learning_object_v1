@@ -223,7 +223,8 @@ curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mo
         "type": "mooc",
         "sort": "best",
         "max": 2,
-        "bloom": "understand"
+        "bloom": "understand",
+        "model": "strict"
     },
     "response": [
         {
@@ -232,7 +233,7 @@ curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mo
             "url": "https://www.edx.org/course/using-python-for-research-2",
             "pictureFullwidth": "https://prod-discovery.edx-cdn.org/media/course/image/c9d14131-a515-462b-82e2-6eaec5bc1c17-f7c5de2ca2ae.small.jpg",
             "pictureSquare": "nan",
-            "provider": "\"Harvard University , edX\"",
+            "provider": "Harvard University , edX",
             "learningTimeUnit": "h",
             "learningTimeValue": 480.0
         },
@@ -242,7 +243,7 @@ curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mo
             "url": "https://www.edx.org/course/python-basics-for-data-science-2",
             "pictureFullwidth": "https://prod-discovery.edx-cdn.org/media/course/image/381a0046-5d78-4790-8776-74620d59f48e-48611c7ca556.small.png",
             "pictureSquare": "nan",
-            "provider": "\"IBM , edX\"",
+            "provider": "IBM , edX",
             "learningTimeUnit": "h",
             "learningTimeValue": 40.0
         }
@@ -314,12 +315,13 @@ curl "https://api.inokufu.com/v1/searchrome?rome=H2605&lang=fr&max=3"
         "type": "",
         "sort": "",
         "max": 3,
-        "bloom": ""
+        "bloom": "",
+        "model": "strict"
     },
     "response": [
         {
             "item": 0,
-            "title": " Les composants électroniques  L'électronique de zéro ...",
+            "title": "Les composants électroniques  L'électronique de zéro ...",
             "url": "https://openclassrooms.com/fr/courses/724810-lelectronique-de-zero/721680-les-composants-electroniques",
             "pictureFullwidth": "https://static.oc-static.com/prod/courses/course_teaser_picture_default.jpg",
             "pictureSquare": "https://static.oc-static.com/prod/courses/course_teaser_picture_default.jpg",
@@ -329,7 +331,7 @@ curl "https://api.inokufu.com/v1/searchrome?rome=H2605&lang=fr&max=3"
         },
         {
             "item": 1,
-            "title": " La diode  L'électronique de zéro  ",
+            "title": "La diode  L'électronique de zéro",
             "url": "https://openclassrooms.com/fr/courses/724810-lelectronique-de-zero/724552-la-diode",
             "pictureFullwidth": "https://static.oc-static.com/prod/courses/course_teaser_picture_default.jpg",
             "pictureSquare": "https://static.oc-static.com/prod/courses/course_teaser_picture_default.jpg",
@@ -341,7 +343,7 @@ curl "https://api.inokufu.com/v1/searchrome?rome=H2605&lang=fr&max=3"
             "item": 2,
             "title": "Enseignes et afficheurs à LED",
             "url": "https://www.coursera.org/learn/enseignes-et-afficheurs-led",
-            "pictureFullwidth": "\"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f3/5cdb40168111e6a053c1fc50b1e8d2/LED-2560x1440px-150dpi.jpg?auto=format,compress\"",
+            "pictureFullwidth": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f3/5cdb40168111e6a053c1fc50b1e8d2/LED-2560x1440px-150dpi.jpg?auto=format,compress",
             "pictureSquare": "nan",
             "provider": "Coursera",
             "learningTimeUnit": "h",
@@ -413,14 +415,15 @@ curl "https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3"
         "type": "",
         "sort": "",
         "max": 3,
-        "bloom": ""
+        "bloom": "",
+        "model": "strict"
     },
     "response": [
         {
             "item": 0,
             "title": "Presentation skills: Speechwriting and Storytelling",
             "url": "https://www.coursera.org/learn/speechwriting",
-            "pictureFullwidth": "\"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/95/96d7702e3311e795cc116ac5c4d4d4/story.png?auto=format,compress\"",
+            "pictureFullwidth": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/95/96d7702e3311e795cc116ac5c4d4d4/story.png?auto=format,compress",
             "pictureSquare": "nan",
             "provider": "Coursera",
             "learningTimeUnit": "h",
@@ -428,7 +431,7 @@ curl "https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3"
         },
         {
             "item": 1,
-            "title": "?Time to Shine Podcast : Public speaking | Communication skills | Storytelling ",
+            "title": "Time to Shine Podcast : Public speaking | Communication skills | Storytelling",
             "url": "https://podcasts.apple.com/fr/podcast/time-to-shine-podcast-public-speaking-communication/id930870411?mt=2&app=podcast&at=1010lMK9",
             "pictureFullwidth": "nan",
             "pictureSquare": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/4f/9c/3c/4f9c3cf9-671e-c6ba-c2a9-c4610144cc57/mza_4495520741840665111.png/400x400.png",
@@ -440,7 +443,7 @@ curl "https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3"
             "item": 2,
             "title": "Oral Communication for Engineering Leaders",
             "url": "https://www.coursera.org/learn/oral-communication",
-            "pictureFullwidth": "\"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/f608209f7311e69f58250f615c1d2a/comp-600px-2.jpg?auto=format,compress\"",
+            "pictureFullwidth": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/f608209f7311e69f58250f615c1d2a/comp-600px-2.jpg?auto=format,compress",
             "pictureSquare": "nan",
             "provider": "Coursera",
             "learningTimeUnit": "h",
