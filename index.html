@@ -351,10 +351,10 @@ curl <span class="s2">"api_endpoint_here"</span>
 <td style="text-align: center">email + phone (24h/7)</td>
 </tr>
 <tr>
-<td>Monthly pricing</td>
-<td style="text-align: center">0 €</td>
-<td style="text-align: center">100 €</td>
-<td style="text-align: center">500 €</td>
+<td>Monthly pricing (€)</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">100</td>
+<td style="text-align: center">500</td>
 <td style="text-align: center">On quote</td>
 </tr>
 </tbody></table>
@@ -605,6 +605,12 @@ More languages will be added in the upcoming months!
 <td style="text-align: center">Yes</td>
 <td>The maximum number of LO in response. Limited to 10.</td>
 </tr>
+<tr>
+<td><code>model</code></td>
+<td style="text-align: center"><code>strict</code></td>
+<td style="text-align: center">No</td>
+<td>Two models are available: <code>strict</code> or <code>extended</code>. <code>strict</code> tends to return less results but closer to the query keywords. <code>extended</code> tends to return more results by taking the broader meaning of the query keywords. If empty, <code>strict</code> model is used by default.</td>
+</tr>
 </tbody></table>
 
 <p>API key must be included in a header that looks like the following:</p>
@@ -724,7 +730,7 @@ More API endpoints are under development. Feel free to reach us at contact@inoku
 <td><code>rome</code></td>
 <td style="text-align: center"></td>
 <td style="text-align: center">Yes</td>
-<td>Code ROME to be searched. Must be the exact ROME code starting by a uppercase letter and followed by 4 digits without any space (e.g. H2605). For the complete list of ROME code, please check <a href="https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/">here</a>.</td>
+<td>ROME code to be searched. Must be the exact ROME code starting by a uppercase letter and followed by 4 digits without any space (e.g. H2605). For the complete list of ROME code, please check <a href="https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/">here</a>.</td>
 </tr>
 <tr>
 <td><code>lang</code></td>
@@ -755,6 +761,12 @@ More API endpoints are under development. Feel free to reach us at contact@inoku
 <td style="text-align: center"></td>
 <td style="text-align: center">Yes</td>
 <td>The maximum number of LO in response. Limited to 10.</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td style="text-align: center"><code>strict</code></td>
+<td style="text-align: center">No</td>
+<td>Two models are available: <code>strict</code> or <code>extended2</code>. <code>strict</code> tends to return less results but closer to the query ROME code. <code>extended2</code> tends to return more results by taking the broader meaning of the query ROME code. If empty, <code>strict</code> model is used by default.</td>
 </tr>
 </tbody></table>
 
@@ -903,6 +915,12 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 <td style="text-align: center"></td>
 <td style="text-align: center">Yes</td>
 <td>The maximum number of LO in response. Limited to 10.</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td style="text-align: center"><code>strict</code></td>
+<td style="text-align: center">No</td>
+<td>Two models are available: <code>strict</code> or <code>extended2</code>. <code>strict</code> tends to return less results but closer to the query Formacode. <code>extended2</code> tends to return more results by taking the broader meaning of the query Formacode. If empty, <code>strict</code> model is used by default.</td>
 </tr>
 </tbody></table>
 
