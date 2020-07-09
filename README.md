@@ -5,7 +5,7 @@
 </p>
 
 
-<p align="center">Building the biggest and sharpest Database of Learning Objects.</p>
+<p align="center">Building the biggest database of Learning Objects.</p>
 
 
 The API documentation page can be accessed [here](https://inokufu.github.io/api/#introduction)
@@ -13,70 +13,56 @@ The API documentation page can be accessed [here](https://inokufu.github.io/api/
 Features
 ------------
 
-* **Clean, intuitive design** — With Slate, the description of your API is on the left side of your documentation, and all the code examples are on the right side. Inspired by [Stripe's](https://stripe.com/docs/api) and [PayPal's](https://developer.paypal.com/webapps/developer/docs/api/) API docs. Slate is responsive, so it looks great on tablets, phones, and even in print.
+* **Only the best** — Our indexing & data wrangling technology GNO6 uses the latest advances in NLP and Machine Learning to sort and highlight the best educational content on any topic. 
 
-* **Everything on a single page** — Gone are the days when your users had to search through a million pages to find what they wanted. Slate puts the entire documentation on a single page. We haven't sacrificed linkability, though. As you scroll, your browser's hash will update to the nearest header, so linking to a particular point in the documentation is still natural and easy.
+* **Multi supports** — Our objective is to index and anaylyse any learning objects available out there. Currently, our API give you access to video, moocs, podcasts and apps. Additional types of support are in preparation: books, ebooks, trainings, degrees, distance learning, articles, courses, etc  
 
-* **Slate is just Markdown** — When you write docs with Slate, you're just writing Markdown, which makes it simple to edit and understand. Everything is written in Markdown — even the code samples are just Markdown code blocks.
+* **Fast** — Our API were developed with speed in mind. Our cloud infrastructure was set up to handle calls at high speed (inferior to a few hundred ms) even when a call involves sorting through millions of Learning Objects. 
 
-* **Write code samples in multiple languages** — If your API has bindings in multiple programming languages, you can easily put in tabs to switch between them. In your document, you'll distinguish different languages by specifying the language name at the top of each code block, just like with GitHub Flavored Markdown.
+* **Scalable** — Wether your are working on a side project, a startup product or integrating our endpoints in a LMS used by major Universities, we have the infrastructure to handle your workload. We are an AWS Technlogy partner and our API is built according to the best practices and tools in the field.
 
-* **Out-of-the-box syntax highlighting** for [over 100 languages](https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers), no configuration required.
+Getting started with Inokufu API Cloud is super easy! Simply call any of our endpoint with the demo key provided in the doc or send us an email to request your own free developer API key  <a href="mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a free API key for testing purpose / paid API key for integrating it in my app/project. %0D%0A %0D%0A Regards, %0D%0A ...">here</a>.
 
-* **Automatic, smoothly scrolling table of contents** on the far left of the page. As you scroll, it displays your current position in the document. It's fast, too. We're using Slate at TripIt to build documentation for our new API, where our table of contents has over 180 entries. We've made sure that the performance remains excellent, even for larger documents.
-
-* **Let your users update your documentation for you** — By default, your Slate-generated documentation is hosted in a public GitHub repository. Not only does this mean you get free hosting for your docs with GitHub Pages, but it also makes it simple for other developers to make pull requests to your docs if they find typos or other problems. Of course, if you don't want to use GitHub, you're also welcome to host your docs elsewhere.
-
-* **RTL Support** Full right-to-left layout for RTL languages such as Arabic, Persian (Farsi), Hebrew etc.
-
-Getting started with Slate is super easy! Simply press the green "use this template" button above and follow the instructions below. Or, if you'd like to check out what Slate is capable of, take a look at the [sample docs](https://slatedocs.github.io/slate/).
-
-Getting Started with Slate
+Getting Started with our API
 ------------------------------
 
-### Prerequisites
+### Check the documentation
 
-You're going to need:
+We recommend you to take a deep look at our API documentation page, which can can be accessed [here](https://inokufu.github.io/api/#introduction)
 
- - **Linux or macOS** — Windows may work, but is unsupported.
- - **Ruby, version 2.3.1 or newer**
- - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
+### Utility
 
-### Getting Set Up
+We have a few utility endpoints to help you set up your call parameters on other endpoints:
+- Type: This endpoint retrieves a list of the types of LO currently supported.
+- Bloom: This endpoint retrieves a list of the levels of learning objectives associated to a LO and currently supported. These levels are adapted from those of [Bloom's taxonomy](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy):
+  - `Discover` is used as a synonym of knowledge, 
+  - `Understand` for comprehension,
+  - `Do` for application
+  - `Curriculum` was added as a compound level for LO that include the three other levels (`Discover`, `Understand`, `Do`) in a coherent way (e.g. University degree).  
+- Lang: This endpoint retrieves a list of the languages currently supported (i.e. english and french) 
 
-1. Press the green "use this template" button at the top of this page.
-2. Follow the instructions to create a new copy of the Slate repository.
-3. Clone your repository (not our original one) to your hard drive with `git clone https://github.com/YOURUSERNAME/slate.git`
-4. `cd slate`
-5. Initialize and start Slate. You can either do this locally, or with Vagrant:
+### Learning Objects
 
-```shell
-# either run this to run locally
-bundle install
-bundle exec middleman server
+These endpoints enable you to search Learning Objects in our index in different ways:
+- by keywords
+- by ROME code
+- by Formacode
 
-# OR run this to run with vagrant
-vagrant up
+### Note on Timeout
 
-# OR run this to run with docker
-docker build . -t slate:latest # this only needs to be run once
-docker run -p 4567:4567 -v $(pwd)/source:/srv/slate/source slate:latest
-```
+You may experience timeout during the first calls to our endpoints after a long period of inactivity when using demo or free keys. Don't worry, wait a few minutes and make your call again, everything should work as usual. There is no cold start issue when using a paid key.
 
-You can now see the docs at http://localhost:4567. Whoa! That was fast!
-
-Now that Slate is all set up on your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/slatedocs/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/slatedocs/slate/wiki/Deploying-Slate).
-
-### Note on JavaScript Runtime
-
-For those who don't have JavaScript runtime or are experiencing JavaScript runtime issues with ExecJS, it is recommended to add the [rubyracer gem](https://github.com/cowboyd/therubyracer) to your gemfile and run `bundle` again.
 
 Questions? Need Help? Found a bug?
 --------------------
 
-If you've got questions about setup, deploying, special feature implementation in your fork, or just want to chat with the developer, please feel free to send us an email to [support@inokufu.com](mailto:support@inokufu.com)!
+If you've got questions about our API, found a bug or just want to chat with the developers, please feel free to send us an email to [support@inokufu.com](mailto:support@inokufu.com)!
 
 
 Credits
 --------------------
-This API documentation was created with Slate. Check it out at <a href="https://slatedocs.github.io/slate">slatedocs.github.io/slate</a>.
+This API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to check their awesome [repo](https://github.com/slatedocs/slate) on Github! 
+
+ROME code is a job thesaurus developped by [Pôle Emploi](https://www.pole-emploi.fr/accueil). Check out their [website](https://www.pole-emploi.fr/employeur/vos-recrutements/le-rome-et-les-fiches-metiers.html) for more information about this thesaurus.
+
+Formacode® is a domain of formation thesaurus developed by [Centre Inffo](https://formacode.centre-inffo.fr). Formacode® is a registered trade mark owned by Centre Inffo. Check out their [website](https://formacode.centre-inffo.fr) for more information about this thesaurus.

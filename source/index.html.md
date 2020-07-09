@@ -3,6 +3,8 @@ title: API Documentation
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
+  - python
+  - php
 
 
 toc_footers:
@@ -33,6 +35,26 @@ curl "api_endpoint_here"
   -H "x-api-key: SAY-FRIEND-AND-ENTER"
 ```
 
+```python
+import requests
+url = 'api_endpoint_here'
+headers = {'x-api-key': 'SAY-FRIEND-AND-ENTER'}
+r = requests.get(url, headers=headers)
+r.json()
+```
+
+```php
+$key = 'SAY-FRIEND-AND-ENTER';
+$curl = curl_init('api_endpoint_here');
+//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file
+curl_setopt($curl,CURLOPT_CAINFO,__DIR__ . DIRECTORY_SEPARATOR . 'certInokufu.cer');
+curl_setopt($curl, CURLOPT_HTTPHEADER, array('x-api-key:'.$key));
+$data = curl_exec($curl);
+if($data===false){
+    var_dump(curl_error($curl));
+};
+```
+
 > Make sure to replace `SAY-FRIEND-AND-ENTER` with your own Developer API key.
 
 Inokufu API Cloud uses API keys to allow access to our API. You can register for a Developer API key by sending us an email at [contact@inokufu.com](mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a free API key for testing purpose / paid API key for integrating it in my app/project. %0D%0A %0D%0A Regards, %0D%0A ...).
@@ -53,26 +75,41 @@ Several usage plans are available depending on your needs.
 
 Usage plan | Free | Lite | Pro | Custom
 --- | :-:  | :-: | :-: | :-:
-Request speed |  10 call/s | 100 call/s | 250 call/s | >> 250 call/s
-Monthly limit | 250 calls | 18k calls | 30k calls | >> 30k calls
-Search in Title | ✔️ | ✔️ |  ✔️ | ✔️
+Request speed |  10 call/s | 100 call/s | 500 call/s | >> 500 call/s
+Monthly limit | 500 calls | 10k calls | 100k calls | >> 100k calls
+Search iby keywords | ✔️ | ✔️ |  ✔️ | ✔️
 Search by ROME | - | ✔️ |  ✔️ | ✔️
 Search by Formacode | - | ✔️ |  ✔️ | ✔️
 Support | - | email |  email (48h) | email + phone (24h/7)
-Monthly pricing (€) | 0 | 100 | 500 | On quote 
+Monthly pricing | 0 | $99 | $499 | On quote 
 
 <aside class="warning">
 Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.
 </aside>
 
 
-# Learning Objects (LO)
-
+# Utility
 ## Type
 
 
 ```shell
 curl "https://api.inokufu.com/v1/type"
+```
+
+```python
+import requests
+r = requests.get('https://api.inokufu.com/v1/type')
+r.json()
+```
+
+```php
+$curl = curl_init('https://api.inokufu.com/v1/type');
+//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file
+curl_setopt($curl,CURLOPT_CAINFO,__DIR__ . DIRECTORY_SEPARATOR . 'certInokufu.cer');
+$data = curl_exec($curl);
+if($data===false){
+    var_dump(curl_error($curl));
+};
 ```
 
 > The above command returns JSON structured like this:
@@ -123,25 +160,41 @@ This endpoint does not require any query parameter.
 curl "https://api.inokufu.com/v1/bloom"
 ```
 
+```python
+import requests
+r = requests.get('https://api.inokufu.com/v1/bloom')
+r.json()
+```
+
+```php
+$curl = curl_init('https://api.inokufu.com/v1/bloom');
+//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file
+curl_setopt($curl,CURLOPT_CAINFO,__DIR__ . DIRECTORY_SEPARATOR . 'certInokufu.cer');
+$data = curl_exec($curl);
+if($data===false){
+    var_dump(curl_error($curl));
+};
+```
+
 > The above command returns JSON structured like this:
 
 ```json
 [
   {
     "bloom": "discover",
-    "description": "These LO are the first step to discover a job or a skill. You'll be able to talk about it, to know the basics. You'll have all the knowledge to decide wether it's for you or not.",
+    "description": "These LO are the first step to discover a job or a skill. You'll be able to talk about it, to know the basics. You'll have all the knowledge to decide wether it's for you or not."
   },
   {
     "bloom": "understand",
-    "description": "These LO help you better understand this job or skill, in details. You'll dive deeper in the theory. You'll be able to explain, estimate, At the end, you'll be a master of the theoretical aspects.",
+    "description": "These LO help you better understand this job or skill, in details. You'll dive deeper in the theory. You'll be able to explain, estimate, At the end, you'll be a master of the theoretical aspects."
   },
   {
     "bloom": "do",
-    "description": "These LO help you put into practice what you have learned. You'll make, manipulate, simulate. You are applying what you learn.",
+    "description": "These LO help you put into practice what you have learned. You'll make, manipulate, simulate. You are applying what you learn."
   },
   {
     "bloom": "curriculum",
-    "description": "These LO train you to a specific job or skill at a professional level. From Discovery, Understanding to Doing, at the end you are a Pro.",
+    "description": "These LO train you to a specific job or skill at a professional level. From Discovery, Understanding to Doing, at the end you are a Pro."
   }
 ]
 ```
@@ -168,6 +221,22 @@ This endpoint does not require any query parameter.
 
 ```shell
 curl "https://api.inokufu.com/v1/lang"
+```
+
+```python
+import requests
+r = requests.get('https://api.inokufu.com/v1/lang')
+r.json()
+```
+
+```php
+$curl = curl_init('https://api.inokufu.com/v1/lang');
+//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file
+curl_setopt($curl,CURLOPT_CAINFO,__DIR__ . DIRECTORY_SEPARATOR . 'certInokufu.cer');
+$data = curl_exec($curl);
+if($data===false){
+    var_dump(curl_error($curl));
+};
 ```
 
 > The above command returns JSON structured like this:
@@ -205,12 +274,35 @@ This endpoint does not require any query parameter.
 More languages will be added in the upcoming months!
 </aside>
 
-## Search in Title
+
+# Learning Objects (LO)
+
+
+## Search by keywords
 
 ```shell
 curl "https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mooc&lang=en&max=2"
   -H "x-api-key: SAY-FRIEND-AND-ENTER"
 ```
+
+```python
+import requests
+url = 'https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mooc&lang=en&max=2'
+headers = {'x-api-key': 'x-api-key: SAY-FRIEND-AND-ENTER'}
+r = requests.get(url, headers=headers)
+r.json()
+```
+```php
+$key = 'SAY-FRIEND-AND-ENTER';
+$curl = curl_init('https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mooc&lang=en&max=2');
+//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file
+curl_setopt($curl,CURLOPT_CAINFO,__DIR__ . DIRECTORY_SEPARATOR . 'certInokufu.cer');
+curl_setopt($curl, CURLOPT_HTTPHEADER, array('x-api-key:'.$key));
+$data = curl_exec($curl);
+if($data===false){
+    var_dump(curl_error($curl));
+};
+
 
 > The above command returns JSON structured like this:
 
@@ -302,6 +394,26 @@ More API endpoints are under development. Feel free to reach us at contact@inoku
 ```shell
 curl "https://api.inokufu.com/v1/searchrome?rome=H2605&lang=fr&max=3"
   -H "x-api-key: SAY-FRIEND-AND-ENTER"
+```
+
+```python
+import requests
+url = 'https://api.inokufu.com/v1/searchrome?rome=H2605&lang=fr&max=3'
+headers = {'x-api-key': 'x-api-key: SAY-FRIEND-AND-ENTER'}
+r = requests.get(url, headers=headers)
+r.json()
+```
+
+```php
+$key = 'SAY-FRIEND-AND-ENTER';
+$curl = curl_init('https://api.inokufu.com/v1/searchrome?rome=H2605&lang=fr&max=3');
+//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file
+curl_setopt($curl,CURLOPT_CAINFO,__DIR__ . DIRECTORY_SEPARATOR . 'certInokufu.cer');
+curl_setopt($curl, CURLOPT_HTTPHEADER, array('x-api-key:'.$key));
+$data = curl_exec($curl);
+if($data===false){
+    var_dump(curl_error($curl));
+};
 ```
 
 > The above command returns JSON structured like this:
@@ -397,12 +509,31 @@ Parameter |  Description
 `learningTimeUnit` | Unit of time associated to the learning time of the LO.
 `learningTimeValue` | Learning time of the LO. Return `-1` when not applicable (N/A) or missing value.
 
-## Search by Formacode
+## Search by Formacode®
 
 ```shell
 curl "https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3"
   -H "x-api-key: SAY-FRIEND-AND-ENTER"
 ```
+
+```python
+import requests
+url = 'https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3'
+headers = {'x-api-key': 'x-api-key: SAY-FRIEND-AND-ENTER'}
+r = requests.get(url, headers=headers)
+r.json()
+```
+
+```php
+$key = 'SAY-FRIEND-AND-ENTER';
+$curl = curl_init('https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3');
+//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file
+curl_setopt($curl,CURLOPT_CAINFO,__DIR__ . DIRECTORY_SEPARATOR . 'certInokufu.cer');
+curl_setopt($curl, CURLOPT_HTTPHEADER, array('x-api-key:'.$key));
+$data = curl_exec($curl);
+if($data===false){
+    var_dump(curl_error($curl));
+};
 
 > The above command returns JSON structured like this:
 
@@ -453,9 +584,9 @@ curl "https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3"
 }
 ```
 
-This endpoint retrieves a list of LO based associated to a specific Formacode number. For more information about Formacode, please check [here](https://formacode.centre-inffo.fr/spip.php?page=thesaurus).
+This endpoint retrieves a list of LO based associated to a specific Formacode® number. For more information about Formacode®, please check [here](https://formacode.centre-inffo.fr/spip.php?page=thesaurus).
 
-LO can be searched and filtered by Formacode number, type, bloom level and language.
+LO can be searched and filtered by Formacode® number, type, bloom level and language.
 
 ### HTTP Request
 
@@ -467,13 +598,13 @@ Query parameters must be included in URL.
 
 Parameter | Default | Required | Description
 --------- | :-: | :-: | -----------
-`formacode` | | Yes | Formacode to be searched. Must be the exact 5-digits Formacode number without any space (e.g. 15012). For the complete list of Formacode, please check [here](https://formacode.centre-inffo.fr/spip.php?page=thesaurus).
+`formacode` | | Yes | Formacode® to be searched. Must be the exact 5-digits Formacode® number without any space (e.g. 15012). For the complete list of Formacode®, please check [here](https://formacode.centre-inffo.fr/spip.php?page=thesaurus).
 `lang` |  | Yes | Currently supported languages are `en` or `fr`.
 `type` | | No | Currently supported types are `video`, `mooc`,`podcast` or `app`. If empty, response will include LO of any type.
 `bloom` | | No | Currently supported Bloom levels are `discover`, `understand`,`do` or `curriculum`. If empty, response will include LO of any Bloom level.
 `sort` | `best` | No | Currently supported sorting order are `random` or `best`. If empty, response will be sorted by relevancy (i.e. `best`).
 `max` |  | Yes | The maximum number of LO in response. Limited to 10.
-`model` | `strict` | No | Two models are available: `strict` or `extended2`. `strict` tends to return less results but closer to the query Formacode. `extended2` tends to return more results by taking the broader meaning of the query Formacode. If empty, `strict` model is used by default. 
+`model` | `strict` | No | Two models are available: `strict` or `extended2`. `strict` tends to return less results but closer to the queried Formacode®. `extended2` tends to return more results by taking the broader meaning of the queried Formacode®. If empty, `strict` model is used by default. 
 
 API key must be included in a header that looks like the following:
 
@@ -501,5 +632,8 @@ More API endpoints are under development. Feel free to reach us at contact@inoku
 
 # Credits
 
-This API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to check their awesome repo on Github!
+This API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to check their awesome [repo](https://github.com/slatedocs/slate) on Github! 
 
+ROME code is a job thesaurus developped by [Pôle Emploi](https://www.pole-emploi.fr/accueil). Check out their [website](https://www.pole-emploi.fr/employeur/vos-recrutements/le-rome-et-les-fiches-metiers.html) for more information about this thesaurus.
+
+Formacode® is a domain of formation thesaurus developed by [Centre Inffo](https://formacode.centre-inffo.fr). Formacode® is a registered trade mark owned by Centre Inffo. Check out their [website](https://formacode.centre-inffo.fr) for more information about this thesaurus.
