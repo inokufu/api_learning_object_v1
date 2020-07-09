@@ -201,7 +201,7 @@
       <script src="javascripts/all-c5541673.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;php&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,6 +212,8 @@
       <img src="images/logo-19cf24dc.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="php">php</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -230,7 +232,7 @@
               </ul>
           </li>
           <li>
-            <a href="#learning-objects-lo" class="toc-h1 toc-link" data-title="Learning Objects (LO)">Learning Objects (LO)</a>
+            <a href="#utility" class="toc-h1 toc-link" data-title="Utility">Utility</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#type" class="toc-h2 toc-link" data-title="Type">Type</a>
@@ -241,14 +243,19 @@
                   <li>
                     <a href="#language" class="toc-h2 toc-link" data-title="Language">Language</a>
                   </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#learning-objects-lo" class="toc-h1 toc-link" data-title="Learning Objects (LO)">Learning Objects (LO)</a>
+              <ul class="toc-list-h2">
                   <li>
-                    <a href="#search-in-title" class="toc-h2 toc-link" data-title="Search in Title">Search in Title</a>
+                    <a href="#search-by-keywords" class="toc-h2 toc-link" data-title="Search by keywords">Search by keywords</a>
                   </li>
                   <li>
                     <a href="#search-by-rome" class="toc-h2 toc-link" data-title="Search by ROME">Search by ROME</a>
                   </li>
                   <li>
-                    <a href="#search-by-formacode" class="toc-h2 toc-link" data-title="Search by Formacode">Search by Formacode</a>
+                    <a href="#search-by-formacode" class="toc-h2 toc-link" data-title="Search by Formacode®">Search by Formacode®</a>
                   </li>
               </ul>
           </li>
@@ -280,6 +287,20 @@
 <div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
   <span class="nt">-H</span> <span class="s2">"x-api-key: SAY-FRIEND-AND-ENTER"</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'api_endpoint_here'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="s">'SAY-FRIEND-AND-ENTER'</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$key</span> <span class="o">=</span> <span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">;</span>
+<span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="s1">'api_endpoint_here'</span><span class="p">);</span>
+<span class="c1">//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span><span class="nx">CURLOPT_CAINFO</span><span class="p">,</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nx">DIRECTORY_SEPARATOR</span> <span class="o">.</span> <span class="s1">'certInokufu.cer'</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'x-api-key:'</span><span class="o">.</span><span class="nv">$key</span><span class="p">));</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
+<span class="p">};</span>
 </code></pre></div>
 <blockquote>
 <p>Make sure to replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key.</p>
@@ -312,18 +333,18 @@ curl <span class="s2">"api_endpoint_here"</span>
 <td>Request speed</td>
 <td style="text-align: center">10 call/s</td>
 <td style="text-align: center">100 call/s</td>
-<td style="text-align: center">250 call/s</td>
-<td style="text-align: center">&gt;&gt; 250 call/s</td>
+<td style="text-align: center">500 call/s</td>
+<td style="text-align: center">&gt;&gt; 500 call/s</td>
 </tr>
 <tr>
 <td>Monthly limit</td>
-<td style="text-align: center">250 calls</td>
-<td style="text-align: center">18k calls</td>
-<td style="text-align: center">30k calls</td>
-<td style="text-align: center">&gt;&gt; 30k calls</td>
+<td style="text-align: center">500 calls</td>
+<td style="text-align: center">10k calls</td>
+<td style="text-align: center">100k calls</td>
+<td style="text-align: center">&gt;&gt; 100k calls</td>
 </tr>
 <tr>
-<td>Search in Title</td>
+<td>Search iby keywords</td>
 <td style="text-align: center">✔️</td>
 <td style="text-align: center">✔️</td>
 <td style="text-align: center">✔️</td>
@@ -351,10 +372,10 @@ curl <span class="s2">"api_endpoint_here"</span>
 <td style="text-align: center">email + phone (24h/7)</td>
 </tr>
 <tr>
-<td>Monthly pricing (€)</td>
+<td>Monthly pricing</td>
 <td style="text-align: center">0</td>
-<td style="text-align: center">100</td>
-<td style="text-align: center">500</td>
+<td style="text-align: center">$99</td>
+<td style="text-align: center">$499</td>
 <td style="text-align: center">On quote</td>
 </tr>
 </tbody></table>
@@ -362,7 +383,17 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="warning">
 Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to make more requests.
 </aside>
-<h1 id='learning-objects-lo'>Learning Objects (LO)</h1><h2 id='type'>Type</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/type"</span>
+<h1 id='utility'>Utility</h1><h2 id='type'>Type</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/type"</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.inokufu.com/v1/type'</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="s1">'https://api.inokufu.com/v1/type'</span><span class="p">);</span>
+<span class="c1">//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span><span class="nx">CURLOPT_CAINFO</span><span class="p">,</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nx">DIRECTORY_SEPARATOR</span> <span class="o">.</span> <span class="s1">'certInokufu.cer'</span><span class="p">);</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
+<span class="p">};</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -418,6 +449,16 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
 
 <aside class="success">More types such as books, trainings, distance learnings and articles will be added in the upcoming weeks. </aside>
 <h2 id='bloom'>Bloom</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/bloom"</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.inokufu.com/v1/bloom'</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="s1">'https://api.inokufu.com/v1/bloom'</span><span class="p">);</span>
+<span class="c1">//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span><span class="nx">CURLOPT_CAINFO</span><span class="p">,</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nx">DIRECTORY_SEPARATOR</span> <span class="o">.</span> <span class="s1">'certInokufu.cer'</span><span class="p">);</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
+<span class="p">};</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -425,19 +466,19 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"discover"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO are the first step to discover a job or a skill. You'll be able to talk about it, to know the basics. You'll have all the knowledge to decide wether it's for you or not."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO are the first step to discover a job or a skill. You'll be able to talk about it, to know the basics. You'll have all the knowledge to decide wether it's for you or not."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"understand"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO help you better understand this job or skill, in details. You'll dive deeper in the theory. You'll be able to explain, estimate, At the end, you'll be a master of the theoretical aspects."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO help you better understand this job or skill, in details. You'll dive deeper in the theory. You'll be able to explain, estimate, At the end, you'll be a master of the theoretical aspects."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"do"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO help you put into practice what you have learned. You'll make, manipulate, simulate. You are applying what you learn."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO help you put into practice what you have learned. You'll make, manipulate, simulate. You are applying what you learn."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"curriculum"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO train you to a specific job or skill at a professional level. From Discovery, Understanding to Doing, at the end you are a Pro."</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"These LO train you to a specific job or skill at a professional level. From Discovery, Understanding to Doing, at the end you are a Pro."</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
@@ -473,6 +514,16 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
 
 <aside class="success">Higher levels of learning objectives are not yet implemented (analysis, synthesis, evaluation) but are definitely on our roadmap.</aside>
 <h2 id='language'>Language</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/lang"</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://api.inokufu.com/v1/lang'</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="s1">'https://api.inokufu.com/v1/lang'</span><span class="p">);</span>
+<span class="c1">//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span><span class="nx">CURLOPT_CAINFO</span><span class="p">,</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nx">DIRECTORY_SEPARATOR</span> <span class="o">.</span> <span class="s1">'certInokufu.cer'</span><span class="p">);</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
+<span class="p">};</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -513,47 +564,62 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
 <aside class="success">
 More languages will be added in the upcoming months!
 </aside>
-<h2 id='search-in-title'>Search in Title</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/search?keywords=python&amp;bloom=understand&amp;type=mooc&amp;lang=en&amp;max=2"</span>
+<h1 id='learning-objects-lo'>Learning Objects (LO)</h1><h2 id='search-by-keywords'>Search by keywords</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/search?keywords=python&amp;bloom=understand&amp;type=mooc&amp;lang=en&amp;max=2"</span>
   <span class="nt">-H</span> <span class="s2">"x-api-key: SAY-FRIEND-AND-ENTER"</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://api.inokufu.com/v1/search?keywords=python&amp;bloom=understand&amp;type=mooc&amp;lang=en&amp;max=2'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="s">'x-api-key: SAY-FRIEND-AND-ENTER'</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$key</span> <span class="o">=</span> <span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">;</span>
+<span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="s1">'https://api.inokufu.com/v1/search?keywords=python&amp;bloom=understand&amp;type=mooc&amp;lang=en&amp;max=2'</span><span class="p">);</span>
+<span class="c1">//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span><span class="nx">CURLOPT_CAINFO</span><span class="p">,</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nx">DIRECTORY_SEPARATOR</span> <span class="o">.</span> <span class="s1">'certInokufu.cer'</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'x-api-key:'</span><span class="o">.</span><span class="nv">$key</span><span class="p">));</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
+<span class="p">};</span>
+
+
+<span class="o">&gt;</span> <span class="nx">The</span> <span class="nx">above</span> <span class="nx">command</span> <span class="nx">returns</span> <span class="nx">JSON</span> <span class="nx">structured</span> <span class="nx">like</span> <span class="k">this</span><span class="o">:</span>
+
+<span class="sb">``</span><span class="err">`</span><span class="nx">json</span>
+<span class="p">{</span>
+    <span class="s2">"statusCode"</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">"request"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"keywords"</span><span class="o">:</span> <span class="s2">"python"</span><span class="p">,</span>
+        <span class="s2">"lang"</span><span class="o">:</span> <span class="s2">"en"</span><span class="p">,</span>
+        <span class="s2">"type"</span><span class="o">:</span> <span class="s2">"mooc"</span><span class="p">,</span>
+        <span class="s2">"sort"</span><span class="o">:</span> <span class="s2">"best"</span><span class="p">,</span>
+        <span class="s2">"max"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">"bloom"</span><span class="o">:</span> <span class="s2">"understand"</span><span class="p">,</span>
+        <span class="s2">"model"</span><span class="o">:</span> <span class="s2">"strict"</span>
+    <span class="p">},</span>
+    <span class="s2">"response"</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Using Python for Research"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://www.edx.org/course/using-python-for-research-2"</span><span class="p">,</span>
+            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/c9d14131-a515-462b-82e2-6eaec5bc1c17-f7c5de2ca2ae.small.jpg"</span><span class="p">,</span>
+            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
+            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"Harvard University , edX"</span><span class="p">,</span>
+            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"h"</span><span class="p">,</span>
+            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">480.0</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Python Basics for Data Science"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://www.edx.org/course/python-basics-for-data-science-2"</span><span class="p">,</span>
+            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/381a0046-5d78-4790-8776-74620d59f48e-48611c7ca556.small.png"</span><span class="p">,</span>
+            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
+            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"IBM , edX"</span><span class="p">,</span>
+            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"h"</span><span class="p">,</span>
+            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">40.0</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="s2">"python"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mooc"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"sort"</span><span class="p">:</span><span class="w"> </span><span class="s2">"best"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"understand"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"strict"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Using Python for Research"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.edx.org/course/using-python-for-research-2"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/c9d14131-a515-462b-82e2-6eaec5bc1c17-f7c5de2ca2ae.small.jpg"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Harvard University , edX"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">480.0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Python Basics for Data Science"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.edx.org/course/python-basics-for-data-science-2"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/381a0046-5d78-4790-8776-74620d59f48e-48611c7ca556.small.png"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IBM , edX"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.0</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
 <p>This endpoint retrieves a list of LO based on the query parameters. </p>
 
 <p>LO can be searched and filtered by keywords, type, bloom level and language.</p>
@@ -663,6 +729,20 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 More API endpoints are under development. Feel free to reach us at contact@inokufu.com if you have specific need or idea. </aside>
 <h2 id='search-by-rome'>Search by ROME</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/searchrome?rome=H2605&amp;lang=fr&amp;max=3"</span>
   <span class="nt">-H</span> <span class="s2">"x-api-key: SAY-FRIEND-AND-ENTER"</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://api.inokufu.com/v1/searchrome?rome=H2605&amp;lang=fr&amp;max=3'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="s">'x-api-key: SAY-FRIEND-AND-ENTER'</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$key</span> <span class="o">=</span> <span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">;</span>
+<span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="s1">'https://api.inokufu.com/v1/searchrome?rome=H2605&amp;lang=fr&amp;max=3'</span><span class="p">);</span>
+<span class="c1">//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span><span class="nx">CURLOPT_CAINFO</span><span class="p">,</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nx">DIRECTORY_SEPARATOR</span> <span class="o">.</span> <span class="s1">'certInokufu.cer'</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'x-api-key:'</span><span class="o">.</span><span class="nv">$key</span><span class="p">));</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
+<span class="p">};</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -816,60 +896,74 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 <td>Learning time of the LO. Return <code>-1</code> when not applicable (N/A) or missing value.</td>
 </tr>
 </tbody></table>
-<h2 id='search-by-formacode'>Search by Formacode</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/searchformacode?formacode=15012&amp;lang=en&amp;max=3"</span>
+<h2 id='search-by-formacode'>Search by Formacode®</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.inokufu.com/v1/searchformacode?formacode=15012&amp;lang=en&amp;max=3"</span>
   <span class="nt">-H</span> <span class="s2">"x-api-key: SAY-FRIEND-AND-ENTER"</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"formacode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15012"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"sort"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"strict"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Presentation skills: Speechwriting and Storytelling"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.coursera.org/learn/speechwriting"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/95/96d7702e3311e795cc116ac5c4d4d4/story.png?auto=format,compress"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coursera"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">32.0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Time to Shine Podcast : Public speaking | Communication skills | Storytelling"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://podcasts.apple.com/fr/podcast/time-to-shine-podcast-public-speaking-communication/id930870411?mt=2&amp;app=podcast&amp;at=1010lMK9"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/4f/9c/3c/4f9c3cf9-671e-c6ba-c2a9-c4610144cc57/mza_4495520741840665111.png/400x400.png"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apple Podcasts"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"min"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">21786.0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oral Communication for Engineering Leaders"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.coursera.org/learn/oral-communication"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/f608209f7311e69f58250f615c1d2a/comp-600px-2.jpg?auto=format,compress"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coursera"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">21.0</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a list of LO based associated to a specific Formacode number. For more information about Formacode, please check <a href="https://formacode.centre-inffo.fr/spip.php?page=thesaurus">here</a>.</p>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://api.inokufu.com/v1/searchformacode?formacode=15012&amp;lang=en&amp;max=3'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'x-api-key'</span><span class="p">:</span> <span class="s">'x-api-key: SAY-FRIEND-AND-ENTER'</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight php tab-php"><code><span class="nv">$key</span> <span class="o">=</span> <span class="s1">'SAY-FRIEND-AND-ENTER'</span><span class="p">;</span>
+<span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">(</span><span class="s1">'https://api.inokufu.com/v1/searchformacode?formacode=15012&amp;lang=en&amp;max=3'</span><span class="p">);</span>
+<span class="c1">//Download the certificate from 'https://api.inokufu.com/v1' to avoid SSL errors and replace 'certInokufu.cer' with the name of your downloaded file</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span><span class="nx">CURLOPT_CAINFO</span><span class="p">,</span><span class="nx">__DIR__</span> <span class="o">.</span> <span class="nx">DIRECTORY_SEPARATOR</span> <span class="o">.</span> <span class="s1">'certInokufu.cer'</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPHEADER</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">'x-api-key:'</span><span class="o">.</span><span class="nv">$key</span><span class="p">));</span>
+<span class="nv">$data</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
+    <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
+<span class="p">};</span>
 
-<p>LO can be searched and filtered by Formacode number, type, bloom level and language.</p>
+<span class="o">&gt;</span> <span class="nx">The</span> <span class="nx">above</span> <span class="nx">command</span> <span class="nx">returns</span> <span class="nx">JSON</span> <span class="nx">structured</span> <span class="nx">like</span> <span class="k">this</span><span class="o">:</span>
+
+<span class="sb">``</span><span class="err">`</span><span class="nx">json</span>
+<span class="p">{</span>
+    <span class="s2">"statusCode"</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="s2">"request"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"formacode"</span><span class="o">:</span> <span class="s2">"15012"</span><span class="p">,</span>
+        <span class="s2">"lang"</span><span class="o">:</span> <span class="s2">"en"</span><span class="p">,</span>
+        <span class="s2">"type"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="s2">"sort"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="s2">"max"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">"bloom"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="s2">"model"</span><span class="o">:</span> <span class="s2">"strict"</span>
+    <span class="p">},</span>
+    <span class="s2">"response"</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Presentation skills: Speechwriting and Storytelling"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://www.coursera.org/learn/speechwriting"</span><span class="p">,</span>
+            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/95/96d7702e3311e795cc116ac5c4d4d4/story.png?auto=format,compress"</span><span class="p">,</span>
+            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
+            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"Coursera"</span><span class="p">,</span>
+            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"h"</span><span class="p">,</span>
+            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">32.0</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Time to Shine Podcast : Public speaking | Communication skills | Storytelling"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://podcasts.apple.com/fr/podcast/time-to-shine-podcast-public-speaking-communication/id930870411?mt=2&amp;app=podcast&amp;at=1010lMK9"</span><span class="p">,</span>
+            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
+            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/4f/9c/3c/4f9c3cf9-671e-c6ba-c2a9-c4610144cc57/mza_4495520741840665111.png/400x400.png"</span><span class="p">,</span>
+            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"Apple Podcasts"</span><span class="p">,</span>
+            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"min"</span><span class="p">,</span>
+            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">21786.0</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Oral Communication for Engineering Leaders"</span><span class="p">,</span>
+            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://www.coursera.org/learn/oral-communication"</span><span class="p">,</span>
+            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/f608209f7311e69f58250f615c1d2a/comp-600px-2.jpg?auto=format,compress"</span><span class="p">,</span>
+            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
+            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"Coursera"</span><span class="p">,</span>
+            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"h"</span><span class="p">,</span>
+            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">21.0</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This endpoint retrieves a list of LO based associated to a specific Formacode® number. For more information about Formacode®, please check <a href="https://formacode.centre-inffo.fr/spip.php?page=thesaurus">here</a>.</p>
+
+<p>LO can be searched and filtered by Formacode® number, type, bloom level and language.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
 <p><code>GET https://api.inokufu.com/v1/searchformacode</code></p>
 <h3 id='query-parameters-6'>Query Parameters</h3>
@@ -887,7 +981,7 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 <td><code>formacode</code></td>
 <td style="text-align: center"></td>
 <td style="text-align: center">Yes</td>
-<td>Formacode to be searched. Must be the exact 5-digits Formacode number without any space (e.g. 15012). For the complete list of Formacode, please check <a href="https://formacode.centre-inffo.fr/spip.php?page=thesaurus">here</a>.</td>
+<td>Formacode® to be searched. Must be the exact 5-digits Formacode® number without any space (e.g. 15012). For the complete list of Formacode®, please check <a href="https://formacode.centre-inffo.fr/spip.php?page=thesaurus">here</a>.</td>
 </tr>
 <tr>
 <td><code>lang</code></td>
@@ -923,7 +1017,7 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 <td><code>model</code></td>
 <td style="text-align: center"><code>strict</code></td>
 <td style="text-align: center">No</td>
-<td>Two models are available: <code>strict</code> or <code>extended2</code>. <code>strict</code> tends to return less results but closer to the query Formacode. <code>extended2</code> tends to return more results by taking the broader meaning of the query Formacode. If empty, <code>strict</code> model is used by default.</td>
+<td>Two models are available: <code>strict</code> or <code>extended2</code>. <code>strict</code> tends to return less results but closer to the queried Formacode®. <code>extended2</code> tends to return more results by taking the broader meaning of the queried Formacode®. If empty, <code>strict</code> model is used by default.</td>
 </tr>
 </tbody></table>
 
@@ -975,7 +1069,11 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 <aside class="success">
 More API endpoints are under development. Feel free to reach us at contact@inokufu.com if you have specific need or idea. </aside>
 <h1 id='credits'>Credits</h1>
-<p>This API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to check their awesome repo on Github!</p>
+<p>This API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to check their awesome <a href="https://github.com/slatedocs/slate">repo</a> on Github! </p>
+
+<p>ROME code is a job thesaurus developped by <a href="https://www.pole-emploi.fr/accueil">Pôle Emploi</a>. Check out their <a href="https://www.pole-emploi.fr/employeur/vos-recrutements/le-rome-et-les-fiches-metiers.html">website</a> for more information about this thesaurus.</p>
+
+<p>Formacode® is a domain of formation thesaurus developed by <a href="https://formacode.centre-inffo.fr">Centre Inffo</a>. Formacode® is a registered trade mark owned by Centre Inffo. Check out their <a href="https://formacode.centre-inffo.fr">website</a> for more information about this thesaurus.</p>
 <h1 id='errors'>Errors</h1>
 <aside class="warning">
 This error section is work in progress.
@@ -1035,6 +1133,8 @@ This error section is work in progress.
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="php">php</a>
           </div>
       </div>
     </div>
