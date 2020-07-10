@@ -23,7 +23,7 @@ Welcome to the Inokufu API Cloud 🎉
 
 This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our index. This index has currently more than 700k learning objects from various sources such as YouTube, Coursera, edX, Apple podcasts, Google Play store, etc.
 
-You can view shell code examples in the dark area to the right. We are working on SDK for Ruby, Python, and JavaScript. When available you will be able to switch the programming language of the examples with the tabs in the top right.
+You can view shell, python and php code examples in the dark area to the right (code examples JavaScript and Ruby are coming shortly). You can switch the programming language of the examples with the tabs in the top right.
 
 # Authentication
 
@@ -67,9 +67,9 @@ Inokufu API Cloud expects for the API key to be included in API requests to the 
 
 ## Usage plans
 
-Free Developer API keys are available on request at [contact@inokufu.com](mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a free API key for testing purpose. %0D%0A %0D%0A Regards, %0D%0A ...) and enable you to make up to 250 calls per month. Perfect for experimenting or building a new edtech app!
+Free Developer API keys are available on request at [contact@inokufu.com](mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a free API key for testing purpose. %0D%0A %0D%0A Regards, %0D%0A ...) and enable you to make up to 500 calls per month. Perfect for experimenting or building a new edtech app!
 
-For higher monthly request quota and request speed, we offer paid usage plan starting at 100 €/month. Feel free to get in touch at [contact@inokufu.com](mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a paid API key for integrating it in my app/project. %0D%0A %0D%0A Regards, %0D%0A ...). We are fully dedicated to the success of our customers and partners. Together we can make education better. 😊
+For higher monthly request quota and request speed, we offer paid usage plan starting at $99/month. Feel free to get in touch at [contact@inokufu.com](mailto:contact@inokufu.com?subject=Inokufu API Key request&body=Hi,%0D%0A %0D%0A I found your awesome Inokufu API Cloud and I would be very intersted to get a Key!%0D%0A %0D%0A My name is .... and I'd like to get a paid API key for integrating it in my app/project. %0D%0A %0D%0A Regards, %0D%0A ...). We are fully dedicated to the success of our customers and partners. Together we can make education better. 😊
 
 Several usage plans are available depending on your needs.
 
@@ -77,9 +77,9 @@ Usage plan | Free | Lite | Pro | Custom
 --- | :-:  | :-: | :-: | :-:
 Request speed |  10 call/s | 100 call/s | 500 call/s | >> 500 call/s
 Monthly limit | 500 calls | 10k calls | 100k calls | >> 100k calls
-Search iby keywords | ✔️ | ✔️ |  ✔️ | ✔️
+Search by keywords | ✔️ | ✔️ |  ✔️ | ✔️
 Search by ROME | - | ✔️ |  ✔️ | ✔️
-Search by Formacode | - | ✔️ |  ✔️ | ✔️
+Search by Formacode® | - | ✔️ |  ✔️ | ✔️
 Support | - | email |  email (48h) | email + phone (24h/7)
 Monthly pricing | 0 | $99 | $499 | On quote 
 
@@ -199,7 +199,7 @@ if($data===false){
 ]
 ```
 
-This endpoint retrieves a list of the levels of learning objectives associated to a LO and currently supported. These levels are adapted from those of [Bloom's taxonomy](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy). `discover` is used as a synonym of knowledge, `understand` for comprehension and `do` for application. Curriculum was added as a compound level for LO that include the three other levels (`discover`, `understand`, `do`) in a coherent way (e.g. University degree).  
+This endpoint retrieves a list of the levels of learning objectives associated to a LO and currently supported. These levels are adapted from those of [Bloom's taxonomy](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy). `discover` is used as a synonym of knowledge, `understand` for comprehension and `do` for application. `curriculum` was added as a compound level for LO that include the three other levels (`discover`, `understand`, `do`) in a coherent way (e.g. University degree).  
 
 Bloom | Learning objective 
 --------- | ------- 
@@ -378,10 +378,10 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 
 Parameter |  Description
 --------- | -----------
-`title` | Complete title of the LO.
+`title` | Title of the LO.
 `url` | Link to the LO webpage.
-`pictureFullwidth` | Link to the picture of the LO in landscape format.
-`pictureSquare` | Link to the picture of the LO in square or portrait format.
+`pictureFullwidth` | Link to the picture of the LO in landscape format. Return `nan` when not applicable (N/A) or missing value.
+`pictureSquare` | Link to the picture of the LO in square or portrait format. Return `nan` when not applicable (N/A) or missing value.
 `provider` | Entity providing or hosting the LO.
 `learningTimeUnit` | Unit of time associated to the learning time of the LO.
 `learningTimeValue` | Learning time of the LO. Return `-1` when not applicable (N/A) or missing value.
@@ -465,7 +465,7 @@ if($data===false){
 }
 ```
 
-This endpoint retrieves a list of LO based associated to a specific ROME code. For more information about ROME code, please check [here](https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/).
+This endpoint retrieves a list of LO associated to a specific ROME code. For more information about ROME code, please check [here](https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/).
 
 LO can be searched and filtered by ROME code, type, bloom level and language.
 
@@ -501,10 +501,10 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 
 Parameter |  Description
 --------- | -----------
-`title` | Complete title of the LO.
+`title` | Title of the LO.
 `url` | Link to the LO webpage.
-`pictureFullwidth` | Link to the picture of the LO in landscape format.
-`pictureSquare` | Link to the picture of the LO in square or portrait format.
+`pictureFullwidth` | Link to the picture of the LO in landscape format. Return `nan` when not applicable (N/A) or missing value.
+`pictureSquare` | Link to the picture of the LO in square or portrait format. Return `nan` when not applicable (N/A) or missing value.
 `provider` | Entity providing or hosting the LO.
 `learningTimeUnit` | Unit of time associated to the learning time of the LO.
 `learningTimeValue` | Learning time of the LO. Return `-1` when not applicable (N/A) or missing value.
@@ -584,7 +584,7 @@ if($data===false){
 }
 ```
 
-This endpoint retrieves a list of LO based associated to a specific Formacode® number. For more information about Formacode®, please check [here](https://formacode.centre-inffo.fr/spip.php?page=thesaurus).
+This endpoint retrieves a list of LO associated to a specific Formacode® number. For more information about Formacode®, please check [here](https://formacode.centre-inffo.fr/spip.php?page=thesaurus).
 
 LO can be searched and filtered by Formacode® number, type, bloom level and language.
 
@@ -619,10 +619,10 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 
 Parameter |  Description
 --------- | -----------
-`title` | Complete title of the LO.
+`title` | Title of the LO.
 `url` | Link to the LO webpage.
-`pictureFullwidth` | Link to the picture of the LO in landscape format.
-`pictureSquare` | Link to the picture of the LO in square or portrait format.
+`pictureFullwidth` | Link to the picture of the LO in landscape format. Return `nan` when not applicable (N/A) or missing value.
+`pictureSquare` | Link to the picture of the LO in square or portrait format. Return `nan` when not applicable (N/A) or missing value.
 `provider` | Entity providing or hosting the LO.
 `learningTimeUnit` | Unit of time associated to the learning time of the LO.
 `learningTimeValue` | Learning time of the LO. Return `-1` when not applicable (N/A) or missing value.
