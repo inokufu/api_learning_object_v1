@@ -5,6 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
   - python
   - php
+  - javascript
 
 
 toc_footers:
@@ -23,7 +24,7 @@ Welcome to the Inokufu API Cloud 🎉
 
 This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our index. This index has currently more than 700k learning objects from various sources such as YouTube, Coursera, edX, Apple podcasts, Google Play store, etc.
 
-You can view shell, python and php code examples in the dark area to the right (code examples JavaScript and Ruby are coming shortly). You can switch the programming language of the examples with the tabs in the top right.
+You can view shell, python, php and JavaScript code examples in the dark area to the right. You can switch the programming language of the examples with the tabs in the top right.
 
 # Authentication
 
@@ -53,6 +54,16 @@ $data = curl_exec($curl);
 if($data===false){
     var_dump(curl_error($curl));
 };
+```
+```javascript
+apiKeySecured = 'SAY-FRIEND-AND-ENTER';
+const search = async () => {fetch('api_endpoint_here', {headers: {"x-api-key": apiKeySecured}} ).then(function(response) {
+  if(response.ok) {
+      response.json().then(function(json) { 
+        const resJson = JSON.stringify(json)
+        //console.log(resJson);
+        return resJson;
+})}})};
 ```
 
 > Make sure to replace `SAY-FRIEND-AND-ENTER` with your own Developer API key.
@@ -110,6 +121,16 @@ $data = curl_exec($curl);
 if($data===false){
     var_dump(curl_error($curl));
 };
+```
+```javascript
+apiKeySecured = 'SAY-FRIEND-AND-ENTER';
+const type = async () => {fetch('https://api.inokufu.com/v1/type' ).then(function(response) {
+  if(response.ok) {
+      response.json().then(function(json) { 
+        const resJson = JSON.stringify(json)
+        //console.log(resJson);
+        return resJson;
+})}})};
 ```
 
 > The above command returns JSON structured like this:
@@ -175,7 +196,16 @@ if($data===false){
     var_dump(curl_error($curl));
 };
 ```
-
+```javascript
+apiKeySecured = 'SAY-FRIEND-AND-ENTER';
+const bloom = async () => {fetch('https://api.inokufu.com/v1/bloom' ).then(function(response) {
+  if(response.ok) {
+      response.json().then(function(json) { 
+        const resJson = JSON.stringify(json)
+        //console.log(resJson);
+        return resJson;
+})}})};
+```
 > The above command returns JSON structured like this:
 
 ```json
@@ -238,7 +268,16 @@ if($data===false){
     var_dump(curl_error($curl));
 };
 ```
-
+```javascript
+apiKeySecured = 'SAY-FRIEND-AND-ENTER';
+const lang = async () => {fetch('https://api.inokufu.com/v1/lang' ).then(function(response) {
+  if(response.ok) {
+      response.json().then(function(json) { 
+        const resJson = JSON.stringify(json)
+        //console.log(resJson);
+        return resJson;
+})}})};
+```
 > The above command returns JSON structured like this:
 
 ```json
@@ -302,6 +341,17 @@ $data = curl_exec($curl);
 if($data===false){
     var_dump(curl_error($curl));
 };
+```
+```javascript
+apiKeySecured = 'SAY-FRIEND-AND-ENTER';
+const search = async () => {fetch('https://api.inokufu.com/v1/search?keywords=python&bloom=understand&type=mooc&lang=en&max=2', {headers: {"x-api-key": apiKeySecured}} ).then(function(response) {
+  if(response.ok) {
+      response.json().then(function(json) { 
+        const resJson = JSON.stringify(json)
+        //console.log(resJson);
+        return resJson;
+})}})};
+```
 
 
 > The above command returns JSON structured like this:
@@ -414,6 +464,16 @@ $data = curl_exec($curl);
 if($data===false){
     var_dump(curl_error($curl));
 };
+```
+```javascript
+apiKeySecured = 'SAY-FRIEND-AND-ENTER';
+const searchrome = async () => {fetch('https://api.inokufu.com/v1/searchrome?rome=H2605&lang=fr&max=3', {headers: {"x-api-key": apiKeySecured}} ).then(function(response) {
+  if(response.ok) {
+      response.json().then(function(json) { 
+        const resJson = JSON.stringify(json)
+        //console.log(resJson);
+        return resJson;
+})}})};
 ```
 
 > The above command returns JSON structured like this:
@@ -534,6 +594,17 @@ $data = curl_exec($curl);
 if($data===false){
     var_dump(curl_error($curl));
 };
+```
+```javascript
+apiKeySecured = 'SAY-FRIEND-AND-ENTER';
+const searchformacode = async () => {fetch('https://api.inokufu.com/v1/searchformacode?formacode=15012&lang=en&max=3', {headers: {"x-api-key": apiKeySecured}} ).then(function(response) {
+  if(response.ok) {
+      response.json().then(function(json) { 
+        const resJson = JSON.stringify(json)
+        //console.log(resJson);
+        return resJson;
+})}})};
+```
 
 > The above command returns JSON structured like this:
 
