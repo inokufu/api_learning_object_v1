@@ -279,7 +279,7 @@
 
 <p>This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our index. This index has currently more than 700k learning objects from various sources such as YouTube, Coursera, edX, Apple podcasts, Google Play store, etc.</p>
 
-<p>You can view shell code examples in the dark area to the right. We are working on SDK for Ruby, Python, and JavaScript. When available you will be able to switch the programming language of the examples with the tabs in the top right.</p>
+<p>You can view shell, python and php code examples in the dark area to the right (code examples JavaScript and Ruby are coming shortly). You can switch the programming language of the examples with the tabs in the top right.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
@@ -314,9 +314,9 @@ curl <span class="s2">"api_endpoint_here"</span>
 
 <aside class="notice">For Demo purpose, you can use this API key : <code>demo29331806e87fe8d34d03ddaad2b1b454b58a5b9d4f1385d4f86bb321</code> but beware both request speed and number of daily calls are limited with this key. </aside> 
 <h2 id='usage-plans'>Usage plans</h2>
-<p>Free Developer API keys are available on request at <a href="mailto:contact@inokufu.com?subject=Inokufu%20API%20Key%20request&amp;body=Hi,%0D%0A%20%0D%0A%20I%20found%20your%20awesome%20Inokufu%20API%20Cloud%20and%20I%20would%20be%20very%20intersted%20to%20get%20a%20Key!%0D%0A%20%0D%0A%20My%20name%20is%20....%20and%20I'd%20like%20to%20get%20a%20free%20API%20key%20for%20testing%20purpose.%20%0D%0A%20%0D%0A%20Regards,%20%0D%0A%20...">contact@inokufu.com</a> and enable you to make up to 250 calls per month. Perfect for experimenting or building a new edtech app!</p>
+<p>Free Developer API keys are available on request at <a href="mailto:contact@inokufu.com?subject=Inokufu%20API%20Key%20request&amp;body=Hi,%0D%0A%20%0D%0A%20I%20found%20your%20awesome%20Inokufu%20API%20Cloud%20and%20I%20would%20be%20very%20intersted%20to%20get%20a%20Key!%0D%0A%20%0D%0A%20My%20name%20is%20....%20and%20I'd%20like%20to%20get%20a%20free%20API%20key%20for%20testing%20purpose.%20%0D%0A%20%0D%0A%20Regards,%20%0D%0A%20...">contact@inokufu.com</a> and enable you to make up to 500 calls per month. Perfect for experimenting or building a new edtech app!</p>
 
-<p>For higher monthly request quota and request speed, we offer paid usage plan starting at 100 €/month. Feel free to get in touch at <a href="mailto:contact@inokufu.com?subject=Inokufu%20API%20Key%20request&amp;body=Hi,%0D%0A%20%0D%0A%20I%20found%20your%20awesome%20Inokufu%20API%20Cloud%20and%20I%20would%20be%20very%20intersted%20to%20get%20a%20Key!%0D%0A%20%0D%0A%20My%20name%20is%20....%20and%20I'd%20like%20to%20get%20a%20paid%20API%20key%20for%20integrating%20it%20in%20my%20app/project.%20%0D%0A%20%0D%0A%20Regards,%20%0D%0A%20...">contact@inokufu.com</a>. We are fully dedicated to the success of our customers and partners. Together we can make education better. 😊</p>
+<p>For higher monthly request quota and request speed, we offer paid usage plan starting at $99/month. Feel free to get in touch at <a href="mailto:contact@inokufu.com?subject=Inokufu%20API%20Key%20request&amp;body=Hi,%0D%0A%20%0D%0A%20I%20found%20your%20awesome%20Inokufu%20API%20Cloud%20and%20I%20would%20be%20very%20intersted%20to%20get%20a%20Key!%0D%0A%20%0D%0A%20My%20name%20is%20....%20and%20I'd%20like%20to%20get%20a%20paid%20API%20key%20for%20integrating%20it%20in%20my%20app/project.%20%0D%0A%20%0D%0A%20Regards,%20%0D%0A%20...">contact@inokufu.com</a>. We are fully dedicated to the success of our customers and partners. Together we can make education better. 😊</p>
 
 <p>Several usage plans are available depending on your needs.</p>
 
@@ -344,7 +344,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 <td style="text-align: center">&gt;&gt; 100k calls</td>
 </tr>
 <tr>
-<td>Search iby keywords</td>
+<td>Search by keywords</td>
 <td style="text-align: center">✔️</td>
 <td style="text-align: center">✔️</td>
 <td style="text-align: center">✔️</td>
@@ -358,7 +358,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 <td style="text-align: center">✔️</td>
 </tr>
 <tr>
-<td>Search by Formacode</td>
+<td>Search by Formacode®</td>
 <td style="text-align: center">-</td>
 <td style="text-align: center">✔️</td>
 <td style="text-align: center">✔️</td>
@@ -482,7 +482,7 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a list of the levels of learning objectives associated to a LO and currently supported. These levels are adapted from those of <a href="https://en.wikipedia.org/wiki/Bloom%27s_taxonomy">Bloom&#39;s taxonomy</a>. <code>discover</code> is used as a synonym of knowledge, <code>understand</code> for comprehension and <code>do</code> for application. Curriculum was added as a compound level for LO that include the three other levels (<code>discover</code>, <code>understand</code>, <code>do</code>) in a coherent way (e.g. University degree).  </p>
+<p>This endpoint retrieves a list of the levels of learning objectives associated to a LO and currently supported. These levels are adapted from those of <a href="https://en.wikipedia.org/wiki/Bloom%27s_taxonomy">Bloom&#39;s taxonomy</a>. <code>discover</code> is used as a synonym of knowledge, <code>understand</code> for comprehension and <code>do</code> for application. <code>curriculum</code> was added as a compound level for LO that include the three other levels (<code>discover</code>, <code>understand</code>, <code>do</code>) in a coherent way (e.g. University degree).  </p>
 
 <table><thead>
 <tr>
@@ -697,7 +697,7 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 </thead><tbody>
 <tr>
 <td><code>title</code></td>
-<td>Complete title of the LO.</td>
+<td>Title of the LO.</td>
 </tr>
 <tr>
 <td><code>url</code></td>
@@ -705,11 +705,11 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 </tr>
 <tr>
 <td><code>pictureFullwidth</code></td>
-<td>Link to the picture of the LO in landscape format.</td>
+<td>Link to the picture of the LO in landscape format. Return <code>nan</code> when not applicable (N/A) or missing value.</td>
 </tr>
 <tr>
 <td><code>pictureSquare</code></td>
-<td>Link to the picture of the LO in square or portrait format.</td>
+<td>Link to the picture of the LO in square or portrait format. Return <code>nan</code> when not applicable (N/A) or missing value.</td>
 </tr>
 <tr>
 <td><code>provider</code></td>
@@ -792,7 +792,7 @@ More API endpoints are under development. Feel free to reach us at contact@inoku
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a list of LO based associated to a specific ROME code. For more information about ROME code, please check <a href="https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/">here</a>.</p>
+<p>This endpoint retrieves a list of LO associated to a specific ROME code. For more information about ROME code, please check <a href="https://www.data.gouv.fr/en/datasets/repertoire-operationnel-des-metiers-et-des-emplois-rome/">here</a>.</p>
 
 <p>LO can be searched and filtered by ROME code, type, bloom level and language.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
@@ -869,7 +869,7 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 </thead><tbody>
 <tr>
 <td><code>title</code></td>
-<td>Complete title of the LO.</td>
+<td>Title of the LO.</td>
 </tr>
 <tr>
 <td><code>url</code></td>
@@ -877,11 +877,11 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 </tr>
 <tr>
 <td><code>pictureFullwidth</code></td>
-<td>Link to the picture of the LO in landscape format.</td>
+<td>Link to the picture of the LO in landscape format. Return <code>nan</code> when not applicable (N/A) or missing value.</td>
 </tr>
 <tr>
 <td><code>pictureSquare</code></td>
-<td>Link to the picture of the LO in square or portrait format.</td>
+<td>Link to the picture of the LO in square or portrait format. Return <code>nan</code> when not applicable (N/A) or missing value.</td>
 </tr>
 <tr>
 <td><code>provider</code></td>
@@ -961,7 +961,7 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
     <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>This endpoint retrieves a list of LO based associated to a specific Formacode® number. For more information about Formacode®, please check <a href="https://formacode.centre-inffo.fr/spip.php?page=thesaurus">here</a>.</p>
+<p>This endpoint retrieves a list of LO associated to a specific Formacode® number. For more information about Formacode®, please check <a href="https://formacode.centre-inffo.fr/spip.php?page=thesaurus">here</a>.</p>
 
 <p>LO can be searched and filtered by Formacode® number, type, bloom level and language.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
@@ -1038,7 +1038,7 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 </thead><tbody>
 <tr>
 <td><code>title</code></td>
-<td>Complete title of the LO.</td>
+<td>Title of the LO.</td>
 </tr>
 <tr>
 <td><code>url</code></td>
@@ -1046,11 +1046,11 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 </tr>
 <tr>
 <td><code>pictureFullwidth</code></td>
-<td>Link to the picture of the LO in landscape format.</td>
+<td>Link to the picture of the LO in landscape format. Return <code>nan</code> when not applicable (N/A) or missing value.</td>
 </tr>
 <tr>
 <td><code>pictureSquare</code></td>
-<td>Link to the picture of the LO in square or portrait format.</td>
+<td>Link to the picture of the LO in square or portrait format. Return <code>nan</code> when not applicable (N/A) or missing value.</td>
 </tr>
 <tr>
 <td><code>provider</code></td>
