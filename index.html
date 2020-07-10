@@ -201,7 +201,7 @@
       <script src="javascripts/all-c5541673.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;php&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;php&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -214,6 +214,7 @@
               <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="php">php</a>
+              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -279,7 +280,7 @@
 
 <p>This API documentation shows you how to access our API endpoints, which can get information about Learning Objects in our index. This index has currently more than 700k learning objects from various sources such as YouTube, Coursera, edX, Apple podcasts, Google Play store, etc.</p>
 
-<p>You can view shell, python and php code examples in the dark area to the right (code examples JavaScript and Ruby are coming shortly). You can switch the programming language of the examples with the tabs in the top right.</p>
+<p>You can view shell, python, php and JavaScript code examples in the dark area to the right. You can switch the programming language of the examples with the tabs in the top right.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
@@ -301,6 +302,14 @@ curl <span class="s2">"api_endpoint_here"</span>
 <span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
     <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
 <span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">apiKeySecured</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">api_endpoint_here</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">headers</span><span class="p">:</span> <span class="p">{</span><span class="dl">"</span><span class="s2">x-api-key</span><span class="dl">"</span><span class="p">:</span> <span class="nx">apiKeySecured</span><span class="p">}}</span> <span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="kd">const</span> <span class="nx">resJson</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+        <span class="c1">//console.log(resJson);</span>
+        <span class="k">return</span> <span class="nx">resJson</span><span class="p">;</span>
+<span class="p">})}})};</span>
 </code></pre></div>
 <blockquote>
 <p>Make sure to replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key.</p>
@@ -394,6 +403,14 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
 <span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
     <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
 <span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">apiKeySecured</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">type</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.inokufu.com/v1/type</span><span class="dl">'</span> <span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="kd">const</span> <span class="nx">resJson</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+        <span class="c1">//console.log(resJson);</span>
+        <span class="k">return</span> <span class="nx">resJson</span><span class="p">;</span>
+<span class="p">})}})};</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -459,6 +476,14 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
 <span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
     <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
 <span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">apiKeySecured</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">bloom</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.inokufu.com/v1/bloom</span><span class="dl">'</span> <span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="kd">const</span> <span class="nx">resJson</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+        <span class="c1">//console.log(resJson);</span>
+        <span class="k">return</span> <span class="nx">resJson</span><span class="p">;</span>
+<span class="p">})}})};</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -524,6 +549,14 @@ Replace <code>SAY-FRIEND-AND-ENTER</code> with your own Developer API key to mak
 <span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
     <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
 <span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">apiKeySecured</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">lang</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.inokufu.com/v1/lang</span><span class="dl">'</span> <span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="kd">const</span> <span class="nx">resJson</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+        <span class="c1">//console.log(resJson);</span>
+        <span class="k">return</span> <span class="nx">resJson</span><span class="p">;</span>
+<span class="p">})}})};</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -580,46 +613,53 @@ More languages will be added in the upcoming months!
 <span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
     <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
 <span class="p">};</span>
-
-
-<span class="o">&gt;</span> <span class="nx">The</span> <span class="nx">above</span> <span class="nx">command</span> <span class="nx">returns</span> <span class="nx">JSON</span> <span class="nx">structured</span> <span class="nx">like</span> <span class="k">this</span><span class="o">:</span>
-
-<span class="sb">``</span><span class="err">`</span><span class="nx">json</span>
-<span class="p">{</span>
-    <span class="s2">"statusCode"</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">"request"</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"keywords"</span><span class="o">:</span> <span class="s2">"python"</span><span class="p">,</span>
-        <span class="s2">"lang"</span><span class="o">:</span> <span class="s2">"en"</span><span class="p">,</span>
-        <span class="s2">"type"</span><span class="o">:</span> <span class="s2">"mooc"</span><span class="p">,</span>
-        <span class="s2">"sort"</span><span class="o">:</span> <span class="s2">"best"</span><span class="p">,</span>
-        <span class="s2">"max"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-        <span class="s2">"bloom"</span><span class="o">:</span> <span class="s2">"understand"</span><span class="p">,</span>
-        <span class="s2">"model"</span><span class="o">:</span> <span class="s2">"strict"</span>
-    <span class="p">},</span>
-    <span class="s2">"response"</span><span class="o">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Using Python for Research"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://www.edx.org/course/using-python-for-research-2"</span><span class="p">,</span>
-            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/c9d14131-a515-462b-82e2-6eaec5bc1c17-f7c5de2ca2ae.small.jpg"</span><span class="p">,</span>
-            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
-            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"Harvard University , edX"</span><span class="p">,</span>
-            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"h"</span><span class="p">,</span>
-            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">480.0</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Python Basics for Data Science"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://www.edx.org/course/python-basics-for-data-science-2"</span><span class="p">,</span>
-            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/381a0046-5d78-4790-8776-74620d59f48e-48611c7ca556.small.png"</span><span class="p">,</span>
-            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
-            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"IBM , edX"</span><span class="p">,</span>
-            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"h"</span><span class="p">,</span>
-            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">40.0</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">apiKeySecured</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.inokufu.com/v1/search?keywords=python&amp;bloom=understand&amp;type=mooc&amp;lang=en&amp;max=2</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">headers</span><span class="p">:</span> <span class="p">{</span><span class="dl">"</span><span class="s2">x-api-key</span><span class="dl">"</span><span class="p">:</span> <span class="nx">apiKeySecured</span><span class="p">}}</span> <span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="kd">const</span> <span class="nx">resJson</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+        <span class="c1">//console.log(resJson);</span>
+        <span class="k">return</span> <span class="nx">resJson</span><span class="p">;</span>
+<span class="p">})}})};</span>
 </code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="s2">"python"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mooc"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sort"</span><span class="p">:</span><span class="w"> </span><span class="s2">"best"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"understand"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"strict"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Using Python for Research"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.edx.org/course/using-python-for-research-2"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/c9d14131-a515-462b-82e2-6eaec5bc1c17-f7c5de2ca2ae.small.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Harvard University , edX"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">480.0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Python Basics for Data Science"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.edx.org/course/python-basics-for-data-science-2"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://prod-discovery.edx-cdn.org/media/course/image/381a0046-5d78-4790-8776-74620d59f48e-48611c7ca556.small.png"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IBM , edX"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <p>This endpoint retrieves a list of LO based on the query parameters. </p>
 
 <p>LO can be searched and filtered by keywords, type, bloom level and language.</p>
@@ -743,6 +783,14 @@ More API endpoints are under development. Feel free to reach us at contact@inoku
 <span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
     <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
 <span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">apiKeySecured</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">searchrome</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.inokufu.com/v1/searchrome?rome=H2605&amp;lang=fr&amp;max=3</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">headers</span><span class="p">:</span> <span class="p">{</span><span class="dl">"</span><span class="s2">x-api-key</span><span class="dl">"</span><span class="p">:</span> <span class="nx">apiKeySecured</span><span class="p">}}</span> <span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="kd">const</span> <span class="nx">resJson</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+        <span class="c1">//console.log(resJson);</span>
+        <span class="k">return</span> <span class="nx">resJson</span><span class="p">;</span>
+<span class="p">})}})};</span>
 </code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -912,55 +960,63 @@ For higher request quota and speed, replace <code>SAY-FRIEND-AND-ENTER</code> wi
 <span class="k">if</span><span class="p">(</span><span class="nv">$data</span><span class="o">===</span><span class="kc">false</span><span class="p">){</span>
     <span class="nb">var_dump</span><span class="p">(</span><span class="nb">curl_error</span><span class="p">(</span><span class="nv">$curl</span><span class="p">));</span>
 <span class="p">};</span>
-
-<span class="o">&gt;</span> <span class="nx">The</span> <span class="nx">above</span> <span class="nx">command</span> <span class="nx">returns</span> <span class="nx">JSON</span> <span class="nx">structured</span> <span class="nx">like</span> <span class="k">this</span><span class="o">:</span>
-
-<span class="sb">``</span><span class="err">`</span><span class="nx">json</span>
-<span class="p">{</span>
-    <span class="s2">"statusCode"</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
-    <span class="s2">"request"</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">"formacode"</span><span class="o">:</span> <span class="s2">"15012"</span><span class="p">,</span>
-        <span class="s2">"lang"</span><span class="o">:</span> <span class="s2">"en"</span><span class="p">,</span>
-        <span class="s2">"type"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-        <span class="s2">"sort"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-        <span class="s2">"max"</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">"bloom"</span><span class="o">:</span> <span class="s2">""</span><span class="p">,</span>
-        <span class="s2">"model"</span><span class="o">:</span> <span class="s2">"strict"</span>
-    <span class="p">},</span>
-    <span class="s2">"response"</span><span class="o">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Presentation skills: Speechwriting and Storytelling"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://www.coursera.org/learn/speechwriting"</span><span class="p">,</span>
-            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/95/96d7702e3311e795cc116ac5c4d4d4/story.png?auto=format,compress"</span><span class="p">,</span>
-            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
-            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"Coursera"</span><span class="p">,</span>
-            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"h"</span><span class="p">,</span>
-            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">32.0</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Time to Shine Podcast : Public speaking | Communication skills | Storytelling"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://podcasts.apple.com/fr/podcast/time-to-shine-podcast-public-speaking-communication/id930870411?mt=2&amp;app=podcast&amp;at=1010lMK9"</span><span class="p">,</span>
-            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
-            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/4f/9c/3c/4f9c3cf9-671e-c6ba-c2a9-c4610144cc57/mza_4495520741840665111.png/400x400.png"</span><span class="p">,</span>
-            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"Apple Podcasts"</span><span class="p">,</span>
-            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"min"</span><span class="p">,</span>
-            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">21786.0</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-            <span class="s2">"item"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="s2">"title"</span><span class="o">:</span> <span class="s2">"Oral Communication for Engineering Leaders"</span><span class="p">,</span>
-            <span class="s2">"url"</span><span class="o">:</span> <span class="s2">"https://www.coursera.org/learn/oral-communication"</span><span class="p">,</span>
-            <span class="s2">"pictureFullwidth"</span><span class="o">:</span> <span class="s2">"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/f608209f7311e69f58250f615c1d2a/comp-600px-2.jpg?auto=format,compress"</span><span class="p">,</span>
-            <span class="s2">"pictureSquare"</span><span class="o">:</span> <span class="s2">"nan"</span><span class="p">,</span>
-            <span class="s2">"provider"</span><span class="o">:</span> <span class="s2">"Coursera"</span><span class="p">,</span>
-            <span class="s2">"learningTimeUnit"</span><span class="o">:</span> <span class="s2">"h"</span><span class="p">,</span>
-            <span class="s2">"learningTimeValue"</span><span class="o">:</span> <span class="mf">21.0</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">apiKeySecured</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">SAY-FRIEND-AND-ENTER</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">searchformacode</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.inokufu.com/v1/searchformacode?formacode=15012&amp;lang=en&amp;max=3</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">headers</span><span class="p">:</span> <span class="p">{</span><span class="dl">"</span><span class="s2">x-api-key</span><span class="dl">"</span><span class="p">:</span> <span class="nx">apiKeySecured</span><span class="p">}}</span> <span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="kd">const</span> <span class="nx">resJson</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span>
+        <span class="c1">//console.log(resJson);</span>
+        <span class="k">return</span> <span class="nx">resJson</span><span class="p">;</span>
+<span class="p">})}})};</span>
 </code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"formacode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15012"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sort"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"bloom"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"strict"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Presentation skills: Speechwriting and Storytelling"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.coursera.org/learn/speechwriting"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/95/96d7702e3311e795cc116ac5c4d4d4/story.png?auto=format,compress"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coursera"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">32.0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Time to Shine Podcast : Public speaking | Communication skills | Storytelling"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://podcasts.apple.com/fr/podcast/time-to-shine-podcast-public-speaking-communication/id930870411?mt=2&amp;app=podcast&amp;at=1010lMK9"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/4f/9c/3c/4f9c3cf9-671e-c6ba-c2a9-c4610144cc57/mza_4495520741840665111.png/400x400.png"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apple Podcasts"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"min"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">21786.0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Oral Communication for Engineering Leaders"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.coursera.org/learn/oral-communication"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureFullwidth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/f608209f7311e69f58250f615c1d2a/comp-600px-2.jpg?auto=format,compress"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pictureSquare"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nan"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Coursera"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeUnit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"h"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"learningTimeValue"</span><span class="p">:</span><span class="w"> </span><span class="mf">21.0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <p>This endpoint retrieves a list of LO associated to a specific Formacode® number. For more information about Formacode®, please check <a href="https://formacode.centre-inffo.fr/spip.php?page=thesaurus">here</a>.</p>
 
 <p>LO can be searched and filtered by Formacode® number, type, bloom level and language.</p>
@@ -1135,6 +1191,7 @@ This error section is work in progress.
                 <a href="#" data-language-name="shell">shell</a>
                 <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="php">php</a>
+                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
